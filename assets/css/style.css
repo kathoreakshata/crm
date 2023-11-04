@@ -112003,4 +112003,8 @@ textarea.form-control {
     }
 }
 
+.logout-icon i{
+font-size: 25px;
+color:red;
+}
 /*# sourceMappingURL=style.css.map */

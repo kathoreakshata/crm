@@ -18,10 +18,10 @@
 
     <!--- FONT-ICONS CSS -->
     <link href="assets\css\icons.css" rel="stylesheet" />
+    <link href="assets\css\icons.css" rel="stylesheet" />
 
     <!-- INTERNAL SWITCHER CSS -->
     <link href="assets\css\switcher.css" rel="stylesheet" />
-    <link href="assets\css\demo.css" rel="stylesheet" />
 
 </head>
 
@@ -87,7 +87,11 @@
                                                     <h6 class="mb-0 ms-1" id="profile-heading">Akshata<i
                                                             class="user-angle ms-1"></i></h6>
                                                 </div>
+                                                <div class="logout-icon">
+                                                    <i class="fa-solid fa-power-off"></i>
+                                                </div>
                                             </a>
+                                            
                                         </div>
                                         <!-- Profile -->
                                     </div>
@@ -137,29 +141,7 @@
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="#" class="slide-item">Inspection Sheet</a></li>
-                                    <li class="sub-slide">
-                                        <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                                class="sub-side-menu__label">Submenu-2</span><i
-                                                class="sub-angle fa fa-angle-right"></i></a>
-                                        <ul class="sub-slide-menu">
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.1</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.2</a></li>
-                                            <li class="sub-slide2">
-                                                <a class="sub-side-menu__item2" href="#"
-                                                    data-bs-toggle="sub-slide2"><span
-                                                        class="sub-side-menu__label2">Submenu-2.3</span><i
-                                                        class="sub-angle2 fa fa-angle-right"></i></a>
-                                                <ul class="sub-slide-menu2">
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.2</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.4</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.5</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="index.php?Inspection_Sheet" class="slide-item">Inspection Sheet</a></li>
                                 </ul>
                             </li>
                             <li class="slide">
@@ -169,29 +151,7 @@
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="#" class="slide-item">Cost Estimation Sheet</a></li>
-                                    <li class="sub-slide">
-                                        <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                                class="sub-side-menu__label">Submenu-2</span><i
-                                                class="sub-angle fa fa-angle-right"></i></a>
-                                        <ul class="sub-slide-menu">
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.1</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.2</a></li>
-                                            <li class="sub-slide2">
-                                                <a class="sub-side-menu__item2" href="#"
-                                                    data-bs-toggle="sub-slide2"><span
-                                                        class="sub-side-menu__label2">Submenu-2.3</span><i
-                                                        class="sub-angle2 fa fa-angle-right"></i></a>
-                                                <ul class="sub-slide-menu2">
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.2</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.4</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.5</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="index.php?Cost_Estimation_Sheet" class="slide-item">Cost Estimation Sheet</a></li>
                                 </ul>
                             </li>
                             <li class="slide">
@@ -201,29 +161,7 @@
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="#" class="slide-item">Submenu-1</a></li>
-                                    <li class="sub-slide">
-                                        <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                                class="sub-side-menu__label">Submenu-2</span><i
-                                                class="sub-angle fa fa-angle-right"></i></a>
-                                        <ul class="sub-slide-menu">
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.1</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.2</a></li>
-                                            <li class="sub-slide2">
-                                                <a class="sub-side-menu__item2" href="#"
-                                                    data-bs-toggle="sub-slide2"><span
-                                                        class="sub-side-menu__label2">Submenu-2.3</span><i
-                                                        class="sub-angle2 fa fa-angle-right"></i></a>
-                                                <ul class="sub-slide-menu2">
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.2</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.4</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.5</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#" class="slide-item">Quotation</a></li>
                                 </ul>
                             </li>
                             <li class="slide">
@@ -233,29 +171,7 @@
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="#" class="slide-item">Submenu-1</a></li>
-                                    <li class="sub-slide">
-                                        <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                                class="sub-side-menu__label">Submenu-2</span><i
-                                                class="sub-angle fa fa-angle-right"></i></a>
-                                        <ul class="sub-slide-menu">
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.1</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.2</a></li>
-                                            <li class="sub-slide2">
-                                                <a class="sub-side-menu__item2" href="#"
-                                                    data-bs-toggle="sub-slide2"><span
-                                                        class="sub-side-menu__label2">Submenu-2.3</span><i
-                                                        class="sub-angle2 fa fa-angle-right"></i></a>
-                                                <ul class="sub-slide-menu2">
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.2</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.4</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.5</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#" class="slide-item">Submenu</a></li>
                                 </ul>
                             </li>
                             <li class="slide">
@@ -265,29 +181,7 @@
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="#" class="slide-item">Submenu-1</a></li>
-                                    <li class="sub-slide">
-                                        <a class="sub-side-menu__item" data-bs-toggle="sub-slide" href="#"><span
-                                                class="sub-side-menu__label">Submenu-2</span><i
-                                                class="sub-angle fa fa-angle-right"></i></a>
-                                        <ul class="sub-slide-menu">
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.1</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.2</a></li>
-                                            <li class="sub-slide2">
-                                                <a class="sub-side-menu__item2" href="#"
-                                                    data-bs-toggle="sub-slide2"><span
-                                                        class="sub-side-menu__label2">Submenu-2.3</span><i
-                                                        class="sub-angle2 fa fa-angle-right"></i></a>
-                                                <ul class="sub-slide-menu2">
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.1</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.2</a></li>
-                                                    <li><a href="#" class="sub-slide-item2">Submenu-2.3.3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.4</a></li>
-                                            <li><a class="sub-slide-item" href="#">Submenu-2.5</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#" class="slide-item">Submenu</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -300,6 +194,25 @@
                 </div>
             </div>
             <!--/APP-SIDEBAR-->
+
+            <!-- APP-BODY -->
+            <div class="page-body">
+                <!--APP-CONTENT OPEN-->
+				<div class="app-content main-content mt-0">
+					<div class="side-app">
+						<!-- CONTAINER -->
+						<div class="main-container container-fluid">
+                            <?php
+                            if (isset($_GET['Cost_Estimation_Sheet'])) {
+                                include('Cost-Estimation-Sheet.php');
+                            }
+                            ?>
+						</div>
+						<!-- CONTAINER CLOSED -->
+					</div>
+				</div>
+            </div>
+            <!-- /APP-BODY -->
         </div>
 
         <!-- FOOTER -->
@@ -356,6 +269,20 @@
     <!-- REPLY JS-->
     <script src="assets\js\reply.js"></script>
 
+    <!-- DATA TABLE JS-->
+		<script src="assets\plugins\datatable\js\jquery.dataTables.min.js"></script>
+		<script src="assets\plugins\datatable\js\dataTables.bootstrap5.js"></script>
+		<script src="assets\plugins\datatable\js\dataTables.buttons.min.js"></script>
+		<script src="assets\plugins\datatable\js\buttons.bootstrap5.min.js"></script>
+		<script src="assets\plugins\datatable\js\jszip.min.js"></script>
+		<script src="assets\plugins\datatable\pdfmake\pdfmake.min.js"></script>
+		<script src="assets\plugins\datatable\pdfmake\vfs_fonts.js"></script>
+		<script src="assets\plugins\datatable\js\buttons.html5.min.js"></script>
+		<script src="assets\plugins\datatable\js\buttons.print.min.js"></script>
+		<script src="assets\plugins\datatable\js\buttons.colVis.min.js"></script>
+		<script src="assets\plugins\datatable\dataTables.responsive.min.js"></script>
+		<script src="assets\plugins\datatable\responsive.bootstrap5.min.js"></script>
+		<script src="assets\js\table-data.js"></script>
 
     <!-- COLOR THEME JS -->
     <script src="assets\js\themeColors.js"></script>
@@ -365,6 +292,9 @@
 
     <!-- SWITCHER JS -->
     <script src="assets\js\switcher.js"></script>
+
+    <!-- FONT AWSOME JS -->
+    <script src="https://kit.fontawesome.com/6d89abe059.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
