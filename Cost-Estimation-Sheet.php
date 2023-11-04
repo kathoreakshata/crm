@@ -16,7 +16,7 @@
   <label for="formFile" class="form-label">Upload Inspection Sheet</label>
   <input class="form-control" type="file" id="formFile">
   <br>
-  <button type="button" class="btn btn-primary">Generate </button>
+  <button type="button" class="btn btn-primary">Generate</button>
 </div>
 
 <caption>Cost Estimation Table</caption>

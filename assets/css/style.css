@@ -43203,7 +43203,7 @@ body.rtl {
 }
 
 .rtl .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl .sub-slide-menu {
@@ -46585,35 +46585,35 @@ body.rtl {
 }
 
 .rtl.hover-submenu .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.hover-submenu .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.icontext-menu .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.icontext-menu .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.closed-leftmenu .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.closed-leftmenu .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.hover-submenu1 .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl.hover-submenu1 .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
 }
 
 .rtl #transactions {
@@ -69011,7 +69011,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .closed-leftmenu .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
     font-family: "typicons";
     font-style: normal;
     font-weight: normal;
@@ -69537,9 +69537,9 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .closed-leftmenu .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
     margin-right: 10px;
-    font-size: 11px;
+    font-size: 20px;
     position: relative;
     font-family: typicons !important;
     opacity: 0.6;
@@ -70340,7 +70340,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .hover-submenu .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
     font-family: "typicons";
     font-style: normal;
     font-weight: normal;
@@ -70849,7 +70849,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .hover-submenu .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
     margin-right: 10px;
     font-size: 11px;
     position: relative;
@@ -71865,7 +71865,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .hover-submenu1 .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
     font-family: "typicons";
     font-style: normal;
     font-weight: normal;
@@ -72378,7 +72378,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .hover-submenu1 .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
     margin-right: 10px;
     font-size: 11px;
     position: relative;
@@ -73369,13 +73369,13 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e0b0";
     font-family: "typicons";
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     top: 1px;
-    font-size: 13px;
+    font-size: 20px;
     margin-right: 8px;
     color: #68798b;
 }
@@ -73871,7 +73871,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
     margin-right: 10px;
     font-size: 11px;
     position: relative;
@@ -74851,7 +74851,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .icontext-menu .slide-menu li .slide-item:before {
-    content: "\e0e7";
+    content: "\e01b";
     font-family: "typicons";
     font-style: normal;
     font-weight: normal;
@@ -75385,7 +75385,7 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .icontext-menu .slide-menu a:before {
-    content: "\e0e7";
+    content: "\e01b";
     margin-right: 10px;
     font-size: 11px;
     position: relative;
