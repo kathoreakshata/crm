@@ -18,10 +18,10 @@
 
     <!--- FONT-ICONS CSS -->
     <link href="assets\css\icons.css" rel="stylesheet" />
-    <link href="assets\css\icons.css" rel="stylesheet" />
 
     <!-- INTERNAL SWITCHER CSS -->
     <link href="assets\css\switcher.css" rel="stylesheet" />
+    <link href="assets\switcher\demo.css" rel="stylesheet" /> 
 
 </head>
 
@@ -325,6 +325,13 @@
     <script src="assets\plugins\datatable\dataTables.responsive.min.js"></script>
     <script src="assets\plugins\datatable\responsive.bootstrap5.min.js"></script>
     <script src="assets\js\table-data.js"></script>
+
+    <!-- TABLE EDITS JS-->
+    <script src="assets\plugins\jQuery-table-edits\table-edits.min.js"></script>
+    <script src="assets\plugins\jQuery-table-edits\table-edits.js"></script>
+
+    <!-- INTERNAL DATATABLES JS -->
+    <script src="assets\js\table-editable.js"></script>
 
     <!-- COLOR THEME JS -->
     <script src="assets\js\themeColors.js"></script>
