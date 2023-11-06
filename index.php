@@ -21,7 +21,7 @@
 
     <!-- INTERNAL SWITCHER CSS -->
     <link href="assets\css\switcher.css" rel="stylesheet" />
-    <link href="assets\switcher\demo.css" rel="stylesheet" /> 
+    <link href="assets\switcher\demo.css" rel="stylesheet" />
 
 </head>
 
