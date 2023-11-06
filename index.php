@@ -91,7 +91,7 @@
                                                     <i class="fa-solid fa-power-off"></i>
                                                 </div>
                                             </a>
-                                            
+
                                         </div>
                                         <!-- Profile -->
                                     </div>
@@ -134,29 +134,54 @@
                                 </a>
                             </li>
                             <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="index.php?Material_Sheet">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21.5,21h-19C2.223877,21,2,21.223877,2,21.5S2.223877,22,2.5,22h19c0.276123,0,0.5-0.223877,0.5-0.5S21.776123,21,21.5,21z M4.5,18.0888672h5c0.1326294,0,0.2597656-0.0527344,0.3534546-0.1465454l10-10c0.000061,0,0.0001221-0.000061,0.0001831-0.0001221c0.1951294-0.1952515,0.1950684-0.5117188-0.0001831-0.7068481l-5-5c0-0.000061-0.000061-0.0001221-0.0001221-0.0001221c-0.1951904-0.1951904-0.5117188-0.1951294-0.7068481,0.0001221l-10,10C4.0526733,12.3291016,4,12.4562378,4,12.5888672v5c0,0.0001831,0,0.0003662,0,0.0005493C4.0001831,17.8654175,4.223999,18.0890503,4.5,18.0888672z M14.5,3.2958984l4.2930298,4.2929688l-2.121582,2.121582l-4.2926025-4.293396L14.5,3.2958984z M5,12.7958984l6.671814-6.671814l4.2926025,4.293396l-6.6713867,6.6713867H5V12.7958984z" />
+                                    </svg>
+
+                                    <span class="side-menu__label">Material Sheet</span></a>
+                            </li>
+                            <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M21.5,21h-19C2.223877,21,2,21.223877,2,21.5S2.223877,22,2.5,22h19c0.276123,0,0.5-0.223877,0.5-0.5S21.776123,21,21.5,21z M4.5,18.0888672h5c0.1326294,0,0.2597656-0.0527344,0.3534546-0.1465454l10-10c0.000061,0,0.0001221-0.000061,0.0001831-0.0001221c0.1951294-0.1952515,0.1950684-0.5117188-0.0001831-0.7068481l-5-5c0-0.000061-0.000061-0.0001221-0.0001221-0.0001221c-0.1951904-0.1951904-0.5117188-0.1951294-0.7068481,0.0001221l-10,10C4.0526733,12.3291016,4,12.4562378,4,12.5888672v5c0,0.0001831,0,0.0003662,0,0.0005493C4.0001831,17.8654175,4.223999,18.0890503,4.5,18.0888672z M14.5,3.2958984l4.2930298,4.2929688l-2.121582,2.121582l-4.2926025-4.293396L14.5,3.2958984z M5,12.7958984l6.671814-6.671814l4.2926025,4.293396l-6.6713867,6.6713867H5V12.7958984z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21.5,21h-19C2.223877,21,2,21.223877,2,21.5S2.223877,22,2.5,22h19c0.276123,0,0.5-0.223877,0.5-0.5S21.776123,21,21.5,21z M4.5,18.0888672h5c0.1326294,0,0.2597656-0.0527344,0.3534546-0.1465454l10-10c0.000061,0,0.0001221-0.000061,0.0001831-0.0001221c0.1951294-0.1952515,0.1950684-0.5117188-0.0001831-0.7068481l-5-5c0-0.000061-0.000061-0.0001221-0.0001221-0.0001221c-0.1951904-0.1951904-0.5117188-0.1951294-0.7068481,0.0001221l-10,10C4.0526733,12.3291016,4,12.4562378,4,12.5888672v5c0,0.0001831,0,0.0003662,0,0.0005493C4.0001831,17.8654175,4.223999,18.0890503,4.5,18.0888672z M14.5,3.2958984l4.2930298,4.2929688l-2.121582,2.121582l-4.2926025-4.293396L14.5,3.2958984z M5,12.7958984l6.671814-6.671814l4.2926025,4.293396l-6.6713867,6.6713867H5V12.7958984z" />
+                                    </svg>
 
                                     <span class="side-menu__label">Inspection</span><i
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="index.php?Inspection_Sheet" class="slide-item">Inspection Sheet</a></li>
+                                    <li><a href="index.php?Inspection_Sheet" class="slide-item">Inspection Sheet</a>
+                                    <li><a href="index.php?Inspection_Report" class="slide-item">Inspection Report</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"  enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z" />
+                                    </svg>
                                     <span class="side-menu__label">Estimation</span><i
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
-                                    <li><a href="index.php?Cost_Estimation_Sheet" class="slide-item">Cost Estimation Sheet</a></li>
+                                    <li><a href="index.php?Cost_Estimation_Sheet" class="slide-item">Cost Estimation
+                                            Sheet</a></li>
                                 </ul>
                             </li>
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"  enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z" />
+                                    </svg>
                                     <span class="side-menu__label">Quotation</span><i
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
@@ -166,7 +191,11 @@
                             </li>
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"  enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z" />
+                                    </svg>
                                     <span class="side-menu__label">Form 6</span><i
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
@@ -176,7 +205,11 @@
                             </li>
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"  enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
+                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19.8535156,8.1464844l-6-6C13.7597656,2.0526733,13.6326294,2,13.5,2H7C5.3438721,2.0018311,4.0018311,3.3438721,4,5v14c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3V8.5C20,8.3673706,19.9473267,8.2402344,19.8535156,8.1464844z M14,3.7069702L18.2930298,8H14V3.7069702z M19,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H7c-1.1040039-0.0014038-1.9985962-0.8959961-2-2V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h6v5.5c0,0.0001831,0,0.0003662,0,0.0005493C13.0001831,8.7765503,13.223999,9.0001831,13.5,9H19V19z" />
+                                    </svg>
                                     <span class="side-menu__label">Green Certificate</span><i
                                         class="angle fa fa-chevron-right"></i></a>
                                 <ul class="slide-menu">
@@ -198,19 +231,28 @@
             <!-- APP-BODY -->
             <div class="page-body">
                 <!--APP-CONTENT OPEN-->
-				<div class="app-content main-content mt-0">
-					<div class="side-app">
-						<!-- CONTAINER -->
-						<div class="main-container container-fluid">
+                <div class="app-content main-content mt-0">
+                    <div class="side-app">
+                        <!-- CONTAINER -->
+                        <div class="main-container container-fluid">
                             <?php
+                            if (isset($_GET['Material_Sheet'])) {
+                                include('Material_Sheet.php');
+                            }
+                            if (isset($_GET['Inspection_Sheet'])) {
+                                include('Inspection_Sheet.php');
+                            }
+                            if (isset($_GET['Inspection_Report'])) {
+                                include('Inspection_Report.php');
+                            }
                             if (isset($_GET['Cost_Estimation_Sheet'])) {
                                 include('Cost-Estimation-Sheet.php');
                             }
                             ?>
-						</div>
-						<!-- CONTAINER CLOSED -->
-					</div>
-				</div>
+                        </div>
+                        <!-- CONTAINER CLOSED -->
+                    </div>
+                </div>
             </div>
             <!-- /APP-BODY -->
         </div>
@@ -270,19 +312,19 @@
     <script src="assets\js\reply.js"></script>
 
     <!-- DATA TABLE JS-->
-		<script src="assets\plugins\datatable\js\jquery.dataTables.min.js"></script>
-		<script src="assets\plugins\datatable\js\dataTables.bootstrap5.js"></script>
-		<script src="assets\plugins\datatable\js\dataTables.buttons.min.js"></script>
-		<script src="assets\plugins\datatable\js\buttons.bootstrap5.min.js"></script>
-		<script src="assets\plugins\datatable\js\jszip.min.js"></script>
-		<script src="assets\plugins\datatable\pdfmake\pdfmake.min.js"></script>
-		<script src="assets\plugins\datatable\pdfmake\vfs_fonts.js"></script>
-		<script src="assets\plugins\datatable\js\buttons.html5.min.js"></script>
-		<script src="assets\plugins\datatable\js\buttons.print.min.js"></script>
-		<script src="assets\plugins\datatable\js\buttons.colVis.min.js"></script>
-		<script src="assets\plugins\datatable\dataTables.responsive.min.js"></script>
-		<script src="assets\plugins\datatable\responsive.bootstrap5.min.js"></script>
-		<script src="assets\js\table-data.js"></script>
+    <script src="assets\plugins\datatable\js\jquery.dataTables.min.js"></script>
+    <script src="assets\plugins\datatable\js\dataTables.bootstrap5.js"></script>
+    <script src="assets\plugins\datatable\js\dataTables.buttons.min.js"></script>
+    <script src="assets\plugins\datatable\js\buttons.bootstrap5.min.js"></script>
+    <script src="assets\plugins\datatable\js\jszip.min.js"></script>
+    <script src="assets\plugins\datatable\pdfmake\pdfmake.min.js"></script>
+    <script src="assets\plugins\datatable\pdfmake\vfs_fonts.js"></script>
+    <script src="assets\plugins\datatable\js\buttons.html5.min.js"></script>
+    <script src="assets\plugins\datatable\js\buttons.print.min.js"></script>
+    <script src="assets\plugins\datatable\js\buttons.colVis.min.js"></script>
+    <script src="assets\plugins\datatable\dataTables.responsive.min.js"></script>
+    <script src="assets\plugins\datatable\responsive.bootstrap5.min.js"></script>
+    <script src="assets\js\table-data.js"></script>
 
     <!-- COLOR THEME JS -->
     <script src="assets\js\themeColors.js"></script>
