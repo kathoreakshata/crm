@@ -14,7 +14,7 @@
 
 <div class="mb-3">
   <label for="formFile" class="form-label">Download Material Sheet Format</label>
-  <button type="button" class="btn btn-primary"><a href="Material Sheet Format.csv" class="btn btn-primary" download>Download </a></button>
+  <button type="button" class="btn btn-primary"><a href="Material Sheet Format.csv" download>Download </a></button>
 </div><br>
 
 <div class="mb-3">
