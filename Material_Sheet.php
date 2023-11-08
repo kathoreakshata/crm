@@ -72,7 +72,7 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
         <label for="formFile" class="form-label">Upload Material Sheet</label>
         <input class="form-control" type="file" id="formFile" name="csv">
         <br>
-        <input type="submit" name="upload" value="upload csv" />
+        <input class="btn btn-primary" type="submit" name="upload" value="upload csv" />
     </form>
 
 </div>
@@ -83,10 +83,10 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
     <div class="col-lg-12">
         <div class="card custom-card">
             <div class="card-header border-bottom">
-                <h3 class="card-title">Bordered Table</h3>
+                <h3 class="card-title"b>Material Sheet</h3>
             </div>
             <div class="card-body">
-                <p class="text-muted">Add borders on all sides of the table and cells.</p>
+                <!-- <p class="text-muted">Add borders on all sides of the table and cells.</p> -->
                 <div class="table-responsive">
                     <table class="table text-nowrap text-md-nowrap table-bordered">
                         <thead>
