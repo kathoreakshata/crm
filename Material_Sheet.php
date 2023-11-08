@@ -5,12 +5,14 @@ function get_html($csv_file)
     $file = fopen($csv_file, 'r');
     $header_arr = fgetcsv($file);
     $html .= '<thead>';
+    $html .= '<tr>'; // Add a row for the header
 
     foreach ($header_arr as $k => $v) {
         $html .= '<th>' . $v . '</th>';
     }
 
-    $html .= '<thead>';
+    $html .= '</tr>'; // Close the header row
+    $html .= '</thead>';
 
     $html .= '<tbody>';
 
@@ -24,32 +26,25 @@ function get_html($csv_file)
 
     $html .= '</tbody>';
 
-    $html .= '</thead>';
+    $html .= '</table>'; // Close the table
     return $html;
 }
 
 //test
-
-
 ?>
 
-
 <?php
-
 $display_table = '';
 if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
-
-    $upload_dir = getcwd() . DIRECTORY_SEPARATOR . '/uploads';
+    $upload_dir = getcwd() . DIRECTORY_SEPARATOR . 'uploads';
     if ($_FILES['csv']['error'] == UPLOAD_ERR_OK) {
         $tmp_name = $_FILES['csv']['tmp_name'];
         $name = basename($_FILES['csv']['name']);
-        $csvfile = $upload_dir . '/' . $name;
+        $csvfile = $upload_dir . DIRECTORY_SEPARATOR . $name;
         move_uploaded_file($tmp_name, $csvfile);
-        echo 'uploaded';
         $display_table = get_html($csvfile);
     }
 }
-
 ?>
 
 
@@ -82,12 +77,33 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
 
 </div>
 
-<caption>Material List</caption>
 
-<div>
-    <?php
-    if (strlen($display_table) > 0) {
-        echo $display_table;
-    }
-    ?>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card">
+            <div class="card-header border-bottom">
+                <h3 class="card-title">Bordered Table</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Add borders on all sides of the table and cells.</p>
+                <div class="table-responsive">
+                    <table class="table text-nowrap text-md-nowrap table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <?php
+                                    if (strlen($display_table) > 0) {
+                                        echo $display_table;
+                                    }
+                                    ?>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- End Row -->
