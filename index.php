@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Waste Mart CRM</title>
+    <title>BWM CRM</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="assets\images\favicon\favicon.ico" />

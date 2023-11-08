@@ -158,9 +158,9 @@ License        :   Licensed under ThemeForest License
 /*Dark Theme Variables*/
 /*Transparent variables*/
 :root {
-    --primary-bg-color: #8fbd56;
-    --primary-bg-hover: #82c035;
-    --primary-bg-border: #8fbd56;
+    --primary-bg-color: #047cbc;
+    --primary-bg-hover:  #0470a9;
+    --primary-bg-border: #036396;
     --dark-body: #2c2f3e;
     --dark-theme: rgba(0, 0, 0, 0.3);
     --dark-bg: rgba(0, 0, 0, 0.2);
@@ -380,6 +380,7 @@ input[type=time],
 input[type=datetime-local],
 input[type=month] {
     -webkit-appearance: listbox;
+    appearance: listbox;
 }
 
 fieldset {
@@ -409,6 +410,7 @@ legend {
 [type=search] {
     outline-offset: -2px;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 [type=search]::-webkit-search-cancel-button,
@@ -2481,6 +2483,7 @@ html [type=button],
 [type=reset],
 [type=submit] {
     -webkit-appearance: button;
+    appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -2541,6 +2544,7 @@ button.btn-close {
     background-color: transparent;
     border: 0;
     -webkit-appearance: none;
+    appearance: none;
     background-image: none;
 }
 
@@ -11202,8 +11206,8 @@ textarea.form-control.parsley-success {
 }
 
 .was-validated .form-control:valid+.invalid-feedback,
-.form-control.is-valid,
-+.invalid-feedback input.form-control.parsley-success,
+.form-control.is-valid
++.invalid-feedback input.form-control.parsley-success
 +.invalid-feedback textarea.form-control.parsley-success+.invalid-feedback {
     display: none !important;
 }
@@ -12919,6 +12923,7 @@ body.fixed-header .page {
     align-items: center;
     margin: 0.75rem 0rem 0.75rem;
     -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
     /* border-radius: 7px; */
@@ -18998,7 +19003,6 @@ a.chip:hover {
     bottom: 0px;
     right: 0px;
     line-height: 30px;
-    vertical-align: middle;
     text-align: center;
     padding: 0;
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
@@ -19611,6 +19615,33 @@ html.fullscreenie {
 }
 
 @-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+
+    8% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+
+    15% {
+        -webkit-transform: scale(0.1);
+        opacity: 1;
+    }
+
+    30% {
+        -webkit-transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.1);
+    }
+}
+
+@keyframes pulse {
     0% {
         -webkit-transform: scale(0);
         opacity: 0;
@@ -22571,12 +22602,14 @@ a.custom-blog-content:hover {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .panel.price>.panel-heading {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .panel.price h3 {
@@ -24439,7 +24472,7 @@ img {
     color: #fff;
 }
 
-.landing-page {
+/* .landing-page { */
     /*accordion*/
     /* top left*/
     /* companies slider */
@@ -24448,7 +24481,7 @@ img {
     /* FAQ's css*/
     /* team css */
     /* team css */
-}
+/* } */
 
 @media (min-width: 992px) {
     .landing-page .header.hor-header {
@@ -25321,7 +25354,7 @@ img {
 
 .landing-page canvas {
     display: block;
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
 }
 
 .landing-page .blob-img {
@@ -27107,7 +27140,7 @@ body.rtl .buy-now {
 .media-left,
 .media-right {
     display: block;
-    vertical-align: top;
+    /* vertical-align: top; */
 }
 
 .media-left,
@@ -27812,29 +27845,34 @@ body.rtl .buy-now {
 .pricing-table:hover>.panel-footer-landing {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05) inset;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .pricing-table:hover>.panel>.panel-body-landing {
     background: #1643A3;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .pricing-table:hover>.panel>.panel-heading-landing-box {
     background: #fff;
     color: #333;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .pricing-table:hover>.panel>.controle-header {
     background: #1643A3;
     /*    border: solid 2px #5CB85C;*/
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .pricing-table:hover>.panel>.panel-footer {
     background: #1643A3;
     /*    border: solid 2px #5CB85C;*/
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     text-align: center;
 }
 
@@ -27849,24 +27887,27 @@ body.rtl .buy-now {
 
 .princing-item:hover .deco-layer--2 {
     -webkit-transform: translate3d(-15px, 0, 0);
-    /* transform: translate3d(-15px, 0, 0); */
+    transform: translate3d(-15px, 0, 0);
 }
 
 .btn-price:hover {
     background: #fff;
     color: #1643A3;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .pricing-table:hover>.panel>.controle-header>.panel-title-landing {
     color: #fff;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 35px;
 }
 
 .pricing-table:hover>.panel>.panel-body-landing>.table>tbody>tr>td {
     font-weight: 500;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .pricing-table>.panel>.controle-header>.panel-title-landing {
@@ -27877,23 +27918,27 @@ body.rtl .buy-now {
 .table>tbody>tr>th {
     font-weight: 500;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .table>tfoot>tr>td,
 .table>tfoot>tr>th {
     font-weight: 500;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .table>thead>tr>td,
 .table>thead>tr>th {
     font-weight: 500;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .panel-body-landing:hover>.table>tbody>tr>td {
     color: #fff;
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .panel-heading-landing {
@@ -27915,12 +27960,14 @@ body.rtl .buy-now {
 
 /*------ Pricing Styles ---------*/
 .panel.price {
+    transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
 }
 
 .panel.price>.panel-heading {
+    transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -44896,10 +44943,6 @@ body.rtl {
     }
 }
 
-.rtl {
-    /*--------- Margin--------------*/
-}
-
 .rtl .me-0 {
     margin-left: 0 !important;
     margin-right: inherit !important;
@@ -47716,7 +47759,7 @@ body.rtl {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    /* *display: inline; */
 }
 
 .selectize-control.multi .selectize-input>div {
@@ -49523,7 +49566,7 @@ See: https://github.com/vitalets/x-editable/issues/393
     margin-left: 7px;
     /* inline-block emulation for IE7*/
     zoom: 1;
-    *display: inline;
+    /* *display: inline; */
 }
 
 .editable-buttons.editable-buttons-bottom {
@@ -49542,7 +49585,7 @@ See: https://github.com/vitalets/x-editable/issues/393
     /* reset white-space decalred in parent*/
     /* display-inline emulation for IE7*/
     zoom: 1;
-    *display: inline;
+    /* *display: inline; */
 }
 
 .editable-buttons .editable-cancel {
@@ -49657,7 +49700,7 @@ See: https://github.com/vitalets/x-editable/issues/393
     width: auto;
     /* inline-block emulation for IE7*/
     zoom: 1;
-    *display: inline;
+    /* *display: inline; */
 }
 
 .editable-container.ui-widget {
@@ -49717,10 +49760,6 @@ a.editable-click.editable-disabled:hover {
 
 .editable-unsaved {
     font-weight: bold;
-}
-
-.editable-unsaved:after {
-    /*    content: '*'*/
 }
 
 .editable-bg-transition {
@@ -50887,6 +50926,7 @@ div.dt-buttons a.btn.processing:after {
     outline: none;
     border: none;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .pickr .pcr-button {
@@ -50949,6 +50989,7 @@ div.dt-buttons a.btn.processing:after {
     outline: none;
     border: none;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .pcr-app * {
@@ -50956,6 +50997,7 @@ div.dt-buttons a.btn.processing:after {
     outline: none;
     border: none;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .pickr input:focus,
@@ -52902,7 +52944,6 @@ footer .pull-center {
     font-family: "dropify";
     font-style: normal;
     font-weight: normal;
-    speak: none;
     display: inline-block;
     text-decoration: inherit;
     width: 1em;
@@ -53487,7 +53528,6 @@ footer .pull-center {
     user-select: none;
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: "fcicons" !important;
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -53532,13 +53572,6 @@ footer .pull-center {
   These styles only apply when the standard-theme is activated.
   When it's NOT activated, the fc-button classes won't even be in the DOM.
   */
-.fc {
-    /* reset */
-    /* theme */
-    /* "primary" coloring */
-    /* icons within buttons */
-}
-
 .fc .fc-button {
     border-radius: 0;
     overflow: visible;
@@ -53548,6 +53581,7 @@ footer .pull-center {
     font-size: inherit;
     line-height: inherit;
     -webkit-appearance: button;
+    appearance: button;
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -53709,10 +53743,6 @@ footer .pull-center {
     border: 1px solid #e9edf4;
 }
 
-.fc {
-    /* stickiness */
-}
-
 .fc .fc-scrollgrid {
     /* all tables (self included) */
     width: 100%;
@@ -53814,10 +53844,6 @@ footer .pull-center {
     position: sticky;
 }
 
-.fc {
-    /* when the harness controls the height, make the view liquid */
-}
-
 .fc .fc-view-harness {
     flex-grow: 1;
     /* because this harness is WITHIN the .fc's flexbox */
@@ -53915,14 +53941,6 @@ a.fc-event:hover {
     display: none;
     position: absolute;
     z-index: 4;
-}
-
-.fc-event:hover {
-    /* TOUCH */
-}
-
-.fc-event-selected {
-    /* TOUCH */
 }
 
 .fc-event:hover .fc-event-resizer {
@@ -54129,13 +54147,6 @@ a.fc-event:hover {
     background: rgba(208, 208, 208, 0.3);
 }
 
-/* help things clear margins of inner content */
-.fc-daygrid-day-frame,
-.fc-daygrid-day-events,
-.fc-daygrid-event-harness {
-    /* for event top/bottom margins */
-}
-
 .fc-daygrid-day-frame:before,
 .fc-daygrid-day-events:before,
 .fc-daygrid-event-harness:before,
@@ -54145,19 +54156,6 @@ a.fc-event:hover {
     content: "";
     clear: both;
     display: table;
-}
-
-.fc {
-    /* cell top */
-    /* day number (within cell top) */
-    /* event container */
-    /* positioning for balanced vs natural */
-    /* event harness */
-    /* bg content */
-    /* events */
-    /* cell bottom (within day-events) */
-    /* week number (within frame) */
-    /* popover */
 }
 
 .fc .fc-daygrid-body {
@@ -54209,10 +54207,6 @@ a.fc-event:hover {
     /* for containing abs positioned event harnesses */
     min-height: 2em;
     /* in addition to being a min-height during natural height, equalizes the heights a little bit */
-}
-
-.fc .fc-daygrid-body-natural {
-    /* can coexist with -unbalanced */
 }
 
 .fc .fc-daygrid-body-natural .fc-daygrid-day-events {
@@ -54380,11 +54374,6 @@ a.fc-event:hover {
 /*
   A VERTICAL event
   */
-.fc-v-event {
-    /* resizer (mouse AND touch) */
-    /* resizer for MOUSE */
-    /* resizer for TOUCH (when event is "selected") */
-}
 
 .fc-v-event .fc-event-main {
     color: #fff;
@@ -54479,12 +54468,6 @@ a.fc-event:hover {
 .fc-v-event.fc-event-selected .fc-event-resizer-end {
     bottom: -4px;
     bottom: calc(var(--fc-event-resizer-dot-total-width, 8px) / -2);
-}
-
-.fc {
-    /* slots AND axis cells (top-left corner of view including the "all-day" text) */
-    /* axis cells (top-left corner of view including the "all-day" text) */
-    /* vertical align is more complicated, uses flexbox */
 }
 
 .fc .fc-timegrid .fc-daygrid-body {
@@ -54639,14 +54622,6 @@ a.fc-event:hover {
     /* top/left/right/bottom will all be set by JS */
 }
 
-.fc {
-    /* bg */
-    /* fg events */
-    /* (the mirror segs are put into a separate container with same classname, */
-    /* and they must be after the normal seg container to appear at a higher z-index) */
-    /* now indicator */
-}
-
 .fc .fc-timegrid-col-bg {
     z-index: 2;
     /* TODO: kill */
@@ -54744,11 +54719,6 @@ a.fc-event:hover {
     right: 0;
 }
 
-.fc {
-    /* line */
-    /* arrow */
-}
-
 .fc .fc-timegrid-now-indicator-line {
     position: absolute;
     z-index: 4;
@@ -54792,14 +54762,6 @@ a.fc-event:hover {
 
 .fc-theme-standard .fc-list {
     border: 1px solid #e9edf4;
-}
-
-.fc {
-    /* message when no events */
-    /* table within the scroller */
-    /* ---------------------------------------------------------------------------------------------------- */
-    /* date heading rows */
-    /* ---------------------------------------------------------------------------------------------------- */
 }
 
 .fc .fc-list-empty {
@@ -54886,12 +54848,6 @@ a.fc-event:hover {
 .fc-list-event.fc-event {
     background: transparent;
     color: #282f53;
-}
-
-.fc {
-    /* shrink certain cols */
-    /* reset <a> styling */
-    /* underline link when hovering over any part of row */
 }
 
 .fc .fc-list-event-graphic,
@@ -55044,7 +55000,6 @@ a.fc-event:hover {
 
 .lg-icon {
     font-family: "lg";
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -55891,9 +55846,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     content: "\e903";
 }
 
-.group {
+/* .group {
     *zoom: 1;
-}
+} */
 
 .group:before {
     display: table;
@@ -57108,7 +57063,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-left: 5px;
     width: 11pt;
     height: 11pt;
-    vertical-align: middle;
 }
 
 .datepicker>.datepicker_header>.icon-home>svg>g>path {
@@ -57516,6 +57470,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     width: 1600px;
     height: 1600px;
     -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 
 /* hack that prevents hw layers "stretching" when loading new tiles */
@@ -57581,6 +57536,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 /* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
 .leaflet-overlay-pane svg {
     -moz-user-select: none;
+    user-select: none;
 }
 
 .leaflet-pane {
@@ -58406,6 +58362,7 @@ iframe {
     background: #6259ca;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .symbol-input100 {
@@ -58434,6 +58391,7 @@ iframe {
 .input100.focus-input100+.symbol-input100 {
     text-transform: uppercase;
     background: #6259ca;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -58647,6 +58605,7 @@ iframe {
     box-sizing: border-box;
     outline: none;
     border: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -58709,6 +58668,7 @@ iframe {
     box-sizing: border-box;
     outline: none;
     border: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -58716,6 +58676,7 @@ iframe {
     box-sizing: border-box;
     outline: none;
     border: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -59113,6 +59074,7 @@ iframe {
     box-sizing: border-box;
     outline: none;
     border: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -59175,6 +59137,7 @@ iframe {
     box-sizing: border-box;
     outline: none;
     border: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -59182,6 +59145,7 @@ iframe {
     box-sizing: border-box;
     outline: none;
     border: none;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -59956,10 +59920,6 @@ iframe {
     stroke-width: 0px;
 }
 
-.nvd3 .nv-legend .nv-disabled rect {
-    /*fill-opacity: 0;*/
-}
-
 .nvd3 .nv-check-box .nv-box {
     fill-opacity: 0;
     stroke-width: 2;
@@ -60435,6 +60395,7 @@ svg.nvd3-svg {
     position: relative;
     -ms-touch-action: pan-Y;
     touch-action: manipulation;
+    backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     /* fix firefox animation glitch */
 }
@@ -60452,22 +60413,27 @@ svg.nvd3-svg {
     position: relative;
     overflow: hidden;
     /* fix for flashing background */
+    transform: translate3d(0px, 0px, 0px);
     -webkit-transform: translate3d(0px, 0px, 0px);
 }
 
 .owl-carousel .owl-wrapper {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
 }
 
 .owl-carousel .owl-item {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -60607,16 +60573,6 @@ svg.nvd3-svg {
     transition: height 500ms ease-in-out;
 }
 
-/*
- * 	Owl Carousel - Lazy Load Plugin
- */
-.owl-carousel .owl-item {
-    /**
-            This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
-            calculation of the height of the owl-item that breaks page layouts
-         */
-}
-
 .owl-carousel .owl-item .owl-lazy {
     opacity: 0;
     transition: opacity 400ms ease;
@@ -60647,6 +60603,7 @@ svg.nvd3-svg {
     margin-top: -40px;
     cursor: pointer;
     z-index: 1;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: transform 100ms ease;
 }
@@ -61480,7 +61437,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     border: none;
     cursor: pointer;
     display: inline-block;
-    float: left;
     height: 24px;
     padding: 3px 5px;
     width: 28px;
@@ -61735,7 +61691,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 .ql-bubble .ql-picker {
     color: #ccc;
     display: inline-block;
-    float: left;
     font-size: 14px;
     font-weight: 500;
     height: 24px;
@@ -62647,7 +62602,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     border: none;
     cursor: pointer;
     display: inline-block;
-    float: left;
     height: 35px;
     padding: 3px 5px;
     width: 35px;
@@ -62917,7 +62871,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 .ql-snow .ql-picker {
     /* color: #444; */
     display: inline-block;
-    float: left;
     font-size: 14px;
     font-weight: 500;
     /* height: 24px; */
@@ -63850,7 +63803,6 @@ div.dtr-bs-modal table.table tr:first-child td {
     display: block;
     margin: 0;
     position: relative;
-    vertical-align: middle;
 }
 
 .select2-container .select2-selection--single {
@@ -112007,12 +111959,4 @@ textarea.form-control {
 font-size: 25px;
 color:red;
 }
-
-/* button a{
-    color: white;
-}
-
-button a:hover{
-    color: white;
-} */
 /*# sourceMappingURL=style.css.map */
