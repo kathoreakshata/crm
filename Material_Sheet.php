@@ -67,23 +67,92 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
     <a href="Material Sheet Format.csv" class="btn btn-primary" download>Download </a>
 </div><br>
 
-<div class="mb-3">
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="formFile" class="form-label">Upload Material Sheet</label>
-        <input class="form-control" type="file" id="formFile" name="csv">
-        <br>
-        <input class="btn btn-primary" type="submit" name="upload" value="upload csv" />
-    </form>
 
+<!-- ROW -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h3 class="card-title">Material Sheet Generate</h3>
+            </div>
+            <div class="card-body">
+                <form action="index.php?Material_Sheet" method="post" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">User Name</label>
+                            <ul>
+                                <li class="select-client">
+                                    <select class="form-control select2-style1" data-placeholder="Choose One">
+                                        <option label="Choose one"></option>
+                                        <option value="1">Angeline Julliet</option>
+                                        <option value="2">Helena Rose</option>
+                                        <option value="13">Daniel Obrien</option>
+                                        <option value="15">Jorah Randy</option>
+                                        <option value="3" selected>Emma Watson</option>
+                                        <option value="5">Bonny Benett</option>
+                                        <option value="7">Jessie Spears</option>
+                                        <option value="9">Skyler Hilda</option>
+                                        <option value="11">Randy Orton</option>
+                                        <option value="14">Benjamin Button</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">QR Report</label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="13">4</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="formFile" class="form-label">Upload Material Sheet</label>
+                        <input class="form-control" type="file" id="formFile" name="csv">
+                        <br>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit" name="upload" value="upload csv">Submit
+                            form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-
+<!-- ROW CLOSED -->
 
 <!-- Row -->
 <div class="row row-sm">
     <div class="col-lg-12">
         <div class="card custom-card">
             <div class="card-header border-bottom">
-                <h3 class="card-title"b>Material Sheet</h3>
+                <h3 class="card-title" b>Material Sheet</h3>
             </div>
             <div class="card-body">
                 <!-- <p class="text-muted">Add borders on all sides of the table and cells.</p> -->

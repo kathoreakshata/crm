@@ -263,7 +263,7 @@
             <div class="container">
                 <div class="row align-items-center flex-row-reverse">
                     <div class="col-md-12 col-sm-12 text-center">
-                        Copyright © 2023 <a href="#">E-Waste Mart CRM</a>. All rights reserved.
+                        Copyright © 2023 <a href="https://bwmgroup.in/" target="_blank">BWM-Bhangarwala Waste Management CRM</a>. All rights reserved.
                     </div>
                 </div>
             </div>
