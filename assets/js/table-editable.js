@@ -34,7 +34,7 @@ $(function (e) {
 
 	// Editable File-Export Data Table
 	var table = $('#editable-file-datatable').DataTable({
-		buttons: ['copy', 'excel', 'pdf'],
+		buttons: ['copy', 'csv', 'pdf'],
 		responsive: true,
 		language: {
 			searchPlaceholder: 'Search...',
