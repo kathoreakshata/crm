@@ -1,1 +1,1 @@
-# crm
+C:\xampp\htdocs\bwm-crm\assets\plugins\datatable\js\buttons.colVis.min.js   ==> column visibility js file
