@@ -67,8 +67,8 @@
                                     <td>Laptop</td>
                                     <td>Dell</td>
                                     <td>5300</td>
-                                    <td>Intel i3</td>
                                     <td>Yes</td>
+                                    <td>Intel i3</td>
                                     <td>Working</td>
                                     <td>No</td>
                                     <td>8th</td>
@@ -110,8 +110,8 @@
                                     <td>Laptop</td>
                                     <td>Dell</td>
                                     <td>5300</td>
-                                    <td>Intel i3</td>
                                     <td>Yes</td>
+                                    <td>Intel i3</td>
                                     <td>Working</td>
                                     <td>No</td>
                                     <td>8th</td>
@@ -153,8 +153,8 @@
                                     <td>Laptop</td>
                                     <td>Dell</td>
                                     <td>5300</td>
-                                    <td>Intel i3</td>
                                     <td>Yes</td>
+                                    <td>Intel i3</td>
                                     <td>Working</td>
                                     <td>No</td>
                                     <td>8th</td>
@@ -196,8 +196,8 @@
                                     <td>Laptop</td>
                                     <td>Dell</td>
                                     <td>5300</td>
-                                    <td>Intel i3</td>
                                     <td>Yes</td>
+                                    <td>Intel i3</td>
                                     <td>Working</td>
                                     <td>No</td>
                                     <td>8th</td>
@@ -239,8 +239,8 @@
                                     <td>Laptop</td>
                                     <td>Dell</td>
                                     <td>5300</td>
-                                    <td>Intel i3</td>
                                     <td>Yes</td>
+                                    <td>Intel i3</td>
                                     <td>Working</td>
                                     <td>No</td>
                                     <td>8th</td>
@@ -282,8 +282,8 @@
                                     <td>Laptop</td>
                                     <td>Dell</td>
                                     <td>5300</td>
-                                    <td>Intel i3</td>
                                     <td>Yes</td>
+                                    <td>Intel i3</td>
                                     <td>Working</td>
                                     <td>No</td>
                                     <td>8th</td>
