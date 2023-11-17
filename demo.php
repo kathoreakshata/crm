@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV File Upload</title>
+    <title>CSV Form</title>
 </head>
 <body>
-    <h2>Upload CSV File</h2>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <label for="file">Choose CSV File:</label>
-        <input type="file" name="file" id="file" accept=".csv" required>
-        <br>
+    <form action="process.php" method="post" enctype="multipart/form-data">
         <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required>
-        <br>
-        <label for="company_name">Company Name:</label>
-        <input type="text" name="company_name" id="company_name" required>
-        <br>
-        <input type="submit" value="Upload">
+        <input type="text" name="username" required><br>
+
+        <label for="companyname">Company Name:</label>
+        <input type="text" name="companyname" required><br>
+
+        <label for="csvfile">CSV File:</label>
+        <input type="file" name="csvfile" accept=".csv" required><br>
+
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
