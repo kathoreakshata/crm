@@ -10604,6 +10604,8 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
     display: block;
     line-height: 18px;
+    font-size: 1rem;
+    color: #76839a;
 }
 
 .rdiobox span {
@@ -111945,5 +111947,10 @@ textarea.form-control {
 .logout-icon i{
 font-size: 25px;
 color:red;
+}
+
+.form-heading-1{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */

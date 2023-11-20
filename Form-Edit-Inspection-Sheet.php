@@ -1,902 +1,274 @@
+<?php
+include("connection/connectdb.php");
+?>
+<style>
+    .form-container {
+        display: none;
+    }
+
+    .form-container.active {
+        display: block;
+    }
+</style>
+
 <div class="row row-sm">
     <div class="col-lg-12 col-md-12">
         <div class="card custom-card">
-            <div class="card-body accordion-wizard">
-                <form id="form">
-                    <div class="list-group">
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Product</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Laptop</option>
-                                                        <option>CPU</option>
-                                                        <option>LCD</option>
-                                                        <option>Printer</option>
-                                                        <option>Server</option>
-                                                        <option>Switch</option>
-                                                        <option>Mobile</option>
-                                                        <option>Projector/LCD/DLP</option>
-                                                        <option>TV</option>
-                                                        <option>UPS</option>
-                                                        <option>Storage</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
+            <div class="card-body">
+                <div class="list-group">
+                    <div class="list-group-item py-4 form-container active" id="form1">
+                        <div class="form-heading-1 mb-0 me-2">Select Type Of Product</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <select class="form-select m-2" id="validationCustom14" name="select_product">
+                                            <option value="laptop">Laptop</option>
+                                            <option value="cpu">CPU</option>
+                                            <option value="lcd">LCD</option>
+                                            <option value="printer">Printer</option>
+                                            <option value="server">Server</option>
+                                            <option value="switch">Switch</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="projector">Projector/LCD/DLP</option>
+                                            <option value="tv">TV</option>
+                                            <option value="ups">UPS</option>
+                                            <option value="storage">Storage</option>
+                                            <option value="other">Other</option>
+                                        </select>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Brand</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Dell</option>
-                                                        <option>Lenovo</option>
-                                                        <option>Acer</option>
-                                                        <option>HP</option>
-                                                        <option>Apple</option>
-                                                        <option>Other</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Model</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>5300</option>
-                                                        <option>5400</option>
-                                                        <option>5500</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Power</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Processor Brand</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Intel</option>
-                                                        <option>Intel Core</option>
-                                                        <option>Xeon</option>
-                                                        <option>Celeron</option>
-                                                        <option>Pentium</option>
-                                                        <option>ARM architecture family</option>
-                                                        <option>Apple</option>
-                                                        <option>Ryzen</option>
-                                                        <option>Sempron</option>
-                                                        <option>Athlon</option>
-                                                        <option>Intel Core 2</option>
-                                                        <option>Opteron</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Processor Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Processor Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Processor Generation</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Intel Core i7</option>
-                                                        <option>Intel Core i5</option>
-                                                        <option>Intel Core i3</option>
-                                                        <option>Skylake</option>
-                                                        <option>Kaby Lake</option>
-                                                        <option>Alder Lake</option>
-                                                        <option>Pentium 4</option>
-                                                        <option>Raptor Lake</option>
-                                                        <option>Rocket Lake</option>
-                                                        <option>Pentium M</option>
-                                                        <option>Intel 80286</option>
-                                                        <option>Pentium II</option>
-                                                        <option>Pentium Dual-Core</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Battery Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Battery Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Motherboard Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Motherboard Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Keyboard Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Keyboard Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Touchpad Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Touchpad Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>HDD Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>HDD Storage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>256 GB SSD</option>
-                                                        <option>512 GB SSD</option>
-                                                        <option>250 GB</option>
-                                                        <option>500 GB</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>HDD Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>RAM Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>RAM Type</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>DDR-4</option>
-                                                        <option>DDR-3</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>RAM Storage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>4 GB</option>
-                                                        <option>8 GB</option>
-                                                        <option>16 GB</option>
-                                                        <option>32 GB</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>RAM Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel A Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel B1 Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel B1 Size</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>14 Inch</option>
-                                                        <option>12.5 Inch</option>
-                                                        <option>13 Inch</option>
-                                                        <option>15.6 Inch</option>
-                                                        <option>17 Inch</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel B1 Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Lining</option>
-                                                        <option>Spot</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel B2 Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel C1 Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel C2 Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel C3 Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel C3 Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel C4 Status</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Working</option>
-                                                        <option>Not Working</option>
-                                                        <option>Missing</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Panel C4 Damage</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <select class="form-select m-2" id="validationCustom14"
-                                                        data-placeholder="select state" required>
-                                                        <option label="Choose" disabled></option>
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">Please select a valid state.</div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-group-item py-4" data-acc-step>
-                            <h6 class="mb-0 me-2" data-acc-title>Remark</h6>
-                            <div data-acc-content>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="card-body">
-                                        <form class="needs-validation" novalidate>
-                                            <div class="form-row">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex">
-                                                    <label for="validationTextarea" class="form-label"></label>
-                                                    <div class="col-lg">
-                                                        <textarea class="form-control mb-4" placeholder="Write remark here if any..."
-                                                            rows="3"></textarea>
-                                                    </div>
-                                                </div>
-                                                <button class="btn btn-primary m-2 text-center"
-                                                    type="submit">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form2')">Next</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
+
+                    <div class="list-group-item py-4 form-container" id="form2">
+                        <div class="form-heading-1 mb-0 me-2">Brand</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="dell"><input name="brand_radio" type="radio"
+                                                        id="dell"> <span>Dell</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="lenovo"><input name="brand_radio"
+                                                        type="radio" id="lenovo"> <span>Lenovo</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="acer"><input name="brand_radio" type="radio"
+                                                        id="acer"> <span>Acer</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="hp"><input name="brand_radio" type="radio"
+                                                        id="hp"> <span>HP</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="apple"><input name="brand_radio"
+                                                        type="radio" id="apple"> <span>Apple</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="asus"><input name="brand_radio" type="radio"
+                                                        id="asus"> <span>Asus</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="other"><input name="brand_radio"
+                                                        type="radio" id="other"> <span>Other</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form1')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form3')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form3">
+                        <div class="form-heading-1 mb-0 me-2">Model</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="5300"><input name="model" type="radio"
+                                                        id="5300"> <span>5300</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="5400"><input name="model" type="radio"
+                                                        id="5400"> <span>5400</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="5500"><input name="model" type="radio"
+                                                        id="5500"> <span>5500</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form2')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form4')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form4">
+                        <div class="form-heading-1 mb-0 me-2">Power</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="yes"><input name="power" type="radio"
+                                                        id="yes"> <span>Yes</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="no"><input name="power" type="radio"
+                                                        id="no"> <span>No</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form3')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form5')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form5">
+                        <div class="form-heading-1 mb-0 me-2">Processor Brand</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <select class="form-select m-2" name="select_processor">
+                                            <option value="amd">AMD</option>
+                                            <option value="atom">Atom</option>
+                                            <option value="intel">Intel</option>
+                                            <option value="quad_core">Quad Core</option>
+                                            <option value="microsoft">Microsoft</option>
+                                            <option value="snapdragon">Snapdragon</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-heading-1 mb-0 me-2">Generation</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <select class="form-select m-2" name="select_generation">
+                                            <option value="2gen">2nd Gen</option>
+                                            <option value="3gen">3rd Gen</option>
+                                            <option value="4gen">4th Gen</option>
+                                            <option value="5gen">5th Gen</option>
+                                            <option value="6gen">6th Gen</option>
+                                            <option value="7gen">7th Gen</option>
+                                            <option value="8gen">8th Gen</option>
+                                            <option value="9gen">9th Gen</option>
+                                            <option value="10gen">10th Gen</option>
+                                            <option value="11gen">11th Gen</option>
+                                            <option value="12gen">12th Gen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-heading-1 mb-0 me-2">Processor Status</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="working"><input name="processor_status"
+                                                        type="radio" id="working"> <span>Working</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="not-working"><input name="processor_status"
+                                                        type="radio" id="not-working"> <span>Not Working</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="missing"><input name="processor_status"
+                                                        type="radio" id="missing"> <span>Missing</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-heading-1 mb-0 me-2">Processor Damage</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="processor-damage-yes"><input name="processor_damage" type="radio"
+                                                        id="processor-damage-yes"> <span>Yes</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="processor-damage-no"><input name="processor_damage" type="radio"
+                                                        id="processor-damage-no"> <span>No</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form4')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form6')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function nextForm(nextFormId) {
+        const currentForm = document.querySelector('.form-container.active');
+        const nextForm = document.getElementById(nextFormId);
+
+        if (currentForm && nextForm) {
+            currentForm.classList.remove('active');
+            nextForm.classList.add('active');
+        }
+    }
+
+    function previousForm(previousFormId) {
+        const currentForm = document.querySelector('.form-container.active');
+        const previousForm = document.getElementById(previousFormId);
+
+        if (currentForm && previousForm) {
+            currentForm.classList.remove('active');
+            previousForm.classList.add('active');
+        }
+    }
+
+    function submitForm() {
+        // Perform form submission logic here
+        alert('Form submitted!');
+    }
+</script>
+
+<!-- <button class="btn btn-primary m-2 text-center" onclick="submitForm()">Submit</button> -->
