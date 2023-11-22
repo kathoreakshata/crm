@@ -2914,14 +2914,14 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff !important;
-    background-color: #e984b1 !important;
-    border-color: #e984b1 !important;
+    background-color: var(--primary-bg-color) !important;
+    border-color: var(--primary-bg-border) !important;
 }
 
 .btn-secondary:hover {
     color: #fff !important;
-    background-color: rgba(233, 132, 177, 0.85) !important;
-    border-color: rgba(233, 132, 177, 0.85);
+    background-color: var(--primary-bg-hover) !important;
+    border-color: var(--primary-bg-border) !important;
 }
 
 .btn-secondary:focus,
@@ -10604,6 +10604,8 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
     display: block;
     line-height: 18px;
+    font-size: 1rem;
+    color: #76839a;
 }
 
 .rdiobox span {
@@ -12792,7 +12794,7 @@ textarea.form-control.parsley-success {
     flex-direction: column;
     -ms-flex-pack: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 body.fixed-header .page {
@@ -64136,6 +64138,7 @@ div.dtr-bs-modal table.table tr:first-child td {
     outline: 0;
     box-shadow: none;
     -webkit-appearance: textfield;
+    appearance: textfield;
 }
 
 .select2-container--default .select2-results>.select2-results__options {
@@ -65095,7 +65098,6 @@ div.dtr-bs-modal table.table tr:first-child td {
     height: 5px;
     background-color: #ebeff8;
     border-radius: 3px;
-    z-order: 0;
     z-index: 9;
 }
 
@@ -65319,7 +65321,6 @@ div.dtr-bs-modal table.table tr:first-child td {
     vertical-align: middle;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    speak: none;
 }
 
 .note-icon-fw {
@@ -66289,6 +66290,7 @@ div.dtr-bs-modal table.table tr:first-child td {
     /* IE8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     /* IE8 */
+    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     left: 0;
@@ -66350,14 +66352,14 @@ div.dtr-bs-modal table.table tr:first-child td {
     overflow: hidden;
     padding: 0 10px;
     max-height: 0;
-    webkit-transition: padding 0.15s, max-height 0.15s;
+    -webkit-transition: padding 0.15s, max-height 0.15s;
     transition: padding 0.15s, max-height 0.15s;
 }
 
 .sweet-alert .sa-error-container.show {
     padding: 10px 0;
     max-height: 100px;
-    webkit-transition: padding 0.2s, max-height 0.2s;
+    -webkit-transition: padding 0.2s, max-height 0.2s;
     transition: padding 0.25s, max-height 0.25s;
 }
 
@@ -67299,10 +67301,12 @@ div.dtr-bs-modal table.table tr:first-child td {
 /* Error icon */
 .sweet-alert .sa-icon.sa-error .sa-line.sa-left {
     -ms-transform: rotate(45deg) \9;
+    transform: rotate(45deg) \9;
 }
 
 .sweet-alert .sa-icon.sa-error .sa-line.sa-right {
     -ms-transform: rotate(-45deg) \9;
+    transform: rotate(-45deg) \9;
 }
 
 .sweet-alert .sa-icon.sa-success {
@@ -67311,10 +67315,12 @@ div.dtr-bs-modal table.table tr:first-child td {
 
 .sweet-alert .sa-icon.sa-success .sa-line.sa-tip {
     -ms-transform: rotate(45deg) \9;
+    transform: rotate(45deg) \9;
 }
 
 .sweet-alert .sa-icon.sa-success .sa-line.sa-long {
     -ms-transform: rotate(-45deg) \9;
+    transform: rotate(-45deg) \9;
 }
 
 /* Success icon */
@@ -67680,10 +67686,6 @@ div.dtr-bs-modal table.table tr:first-child td {
     padding: 15px 20px;
 }
 
-.tab_wrapper .content_wrapper .tab_content.active {
-    /* display: block; */
-}
-
 .tab_wrapper .content_wrapper .tab_content .error {
     color: red;
 }
@@ -67715,7 +67717,6 @@ div.dtr-bs-modal table.table tr:first-child td {
 }
 
 .tab_wrapper .content_wrapper .accordian_header .arrow {
-    float: right;
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -68506,12 +68507,6 @@ div.dtr-bs-modal table.table tr:first-child td {
 
 .tree ul li:before {
     border-top: 1px solid #eaedf1;
-}
-
-/* ######## SIDEMENU-STYLES ######## */
-.closed-leftmenu {
-    /*-- Subslide ---*/
-    /*-- Subslide2 ---*/
 }
 
 @media (min-width: 992px) {
@@ -69626,11 +69621,6 @@ div.dtr-bs-modal table.table tr:first-child td {
     .app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .side-menu__icon {
         color: var(--primary-bg-color);
     }
-}
-
-.hover-submenu {
-    /*-- Subslide ---*/
-    /*-- Subslide2 ---*/
 }
 
 @media (max-width: 767.98px) {
@@ -71253,11 +71243,6 @@ div.dtr-bs-modal table.table tr:first-child td {
             background-color: transparent !important;
         }
     }
-}
-
-.hover-submenu1 {
-    /*-- Subslide ---*/
-    /*-- Subslide2 ---*/
 }
 
 @media (max-width: 767.98px) {
@@ -73156,6 +73141,7 @@ div.dtr-bs-modal table.table tr:first-child td {
     z-index: 99;
     background: #fff !important;
     -webkit-box-shadow: 0 8px 24px rgba(229, 228, 230, 0.4);
+    box-shadow: 0 8px 24px rgba(229, 228, 230, 0.4);
     -webkit-transition: all ease 0.2s;
     -o-transition: all ease 0.2s;
     transition: all ease 0.2s;
@@ -74201,11 +74187,6 @@ div.dtr-bs-modal table.table tr:first-child td {
         opacity: inherit;
         visibility: inherit;
     }
-}
-
-.icontext-menu {
-    /*-- Subslide ---*/
-    /*-- Subslide2 ---*/
 }
 
 @media (min-width: 992px) {
@@ -77651,12 +77632,10 @@ ul li .legend-dots {
 
 .weather-card .top .wrapper .mynav .lnr-chevron-left {
     display: inline-block;
-    float: left;
 }
 
 .weather-card .top .wrapper .mynav .lnr-cog {
     display: inline-block;
-    float: right;
 }
 
 .weather-card .top .wrapper .heading {
@@ -77754,7 +77733,6 @@ ul li .legend-dots {
 .weather-card .bottom .wrapper .forecast li .condition {
     display: inline-block;
     vertical-align: middle;
-    float: right;
     font-size: 25px;
 }
 
@@ -92036,66 +92014,77 @@ textarea.form-control {
 .text-primary-gradient {
     background: linear-gradient(to right, var(--primary-bg-color) 0%, var(--primary-bg-color) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-secondary-gradient {
     background: linear-gradient(to right, #e984b1 0%, #d32875 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-warning-gradient {
     background: linear-gradient(to right, #e7c354 0%, #c9a22f 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-custom-yellow-gradient {
     background: linear-gradient(to right, #e7c354 0%, #c9a22f 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-info-gradient {
     background: linear-gradient(to right, #59adec 0%, #2a85ca 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-danger-gradient {
     background: linear-gradient(to right, #d12c47 0%, #df092d 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-success-gradient {
     background: linear-gradient(to right, #13bfa6 0%, #00705f 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-facebook-gradient {
     background: linear-gradient(to right, #467fcf 0%, #132949 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-twitter-gradient {
     background: linear-gradient(to right, #59adec 0%, #2a85ca 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-google-plus-gradient {
     background: linear-gradient(to right, #fc7303 0%, #954300 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-pinterset-gradient {
     background: linear-gradient(to right, #e32f2f 0%, #a30606 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -111958,5 +111947,10 @@ textarea.form-control {
 .logout-icon i{
 font-size: 25px;
 color:red;
+}
+
+.form-heading-1{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */
