@@ -76,48 +76,36 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
                 <h3 class="card-title">Material Sheet Generate</h3>
             </div>
             <div class="card-body">
-                <form action="index.php?Material_Sheet" method="post" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate>
+                <form action="database.php" method="post" enctype="multipart/form-data"
+                    class="row g-3 needs-validation" novalidate>
 
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-label">User Name</label>
-                            <ul>
-                                <li class="select-client">
-                                    <select class="form-control select2-style1" data-placeholder="Choose One">
-                                        <option label="Choose one"></option>
-                                        <option value="1">Angeline Julliet</option>
-                                        <option value="2">Helena Rose</option>
-                                        <option value="13">Daniel Obrien</option>
-                                        <option value="15">Jorah Randy</option>
-                                        <option value="3" selected>Emma Watson</option>
-                                        <option value="5">Bonny Benett</option>
-                                        <option value="7">Jessie Spears</option>
-                                        <option value="9">Skyler Hilda</option>
-                                        <option value="11">Randy Orton</option>
-                                        <option value="14">Benjamin Button</option>
-                                    </select>
-                                </li>
-                            </ul>
+                            <input type="text" name="Username" class="form-control" id="validationCustom01" value="Mark" required>
+                            <div class="valid-feedback">
+                            User Name
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">Company Name</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                        <input type="text" name="Companyname" class="form-control" id="validationCustom01" value="Mark" required>
                         <div class="valid-feedback">
-                            Looks good!
+                            Company Name
                         </div>
                     </div>
 
                     <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">QR Report</label>
-                        <select class="form-select" id="validationCustom04" required>
+                        <label for="validationCustom04" class="form-label">QC Report</label>
+                        <select class="form-select" name="QCreport" id="validationCustom04" required>
                             <option selected disabled value="">1</option>
                             <option value="1">2</option>
                             <option value="2">3</option>
                             <option value="13">4</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please select a valid state.
+                            Please select a QC Report.
                         </div>
                     </div>
                     <div class="col-12">
