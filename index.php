@@ -149,6 +149,7 @@
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Sub-menus</a></li>
                                     <li><a href="index.php?Inspection_Sheet" class="slide-item">Inspection Sheet</a>
+                                    <li><a href="index.php?Inspection_Sheet2" class="slide-item">Inspection Sheet</a>
                                     <li><a href="index.php?Inspection_Report" class="slide-item">Inspection Report</a>
                                     </li>
                                 </ul>
@@ -235,6 +236,9 @@
                             if (isset($_GET['Inspection_Sheet'])) {
                                 include('Inspection_Sheet.php');
                             }
+                            if (isset($_GET['Inspection_Sheet2'])) {
+                                include('Inspection_Sheet2.php');
+                            }
                             if (isset($_GET['Inspection_Report'])) {
                                 include('Inspection_Report.php');
                             }
@@ -243,6 +247,9 @@
                             }
                             if (isset($_GET['Form_Edit_Inspection_Sheet'])) {
                                 include('Form-Edit-Inspection-Sheet.php');
+                            }
+                            if (isset($_GET['Form_Edit_Inspection_Sheet2'])) {
+                                include('Form-Edit-Inspection-Sheet2.php');
                             }
                             ?>
                         </div>

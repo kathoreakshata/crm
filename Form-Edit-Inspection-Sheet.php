@@ -841,8 +841,7 @@ include("connection/connectdb.php");
                                     <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
                                     <button class="btn btn-primary m-2 text-center"
                                         onclick="previousForm('form13')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form15')">Next</button>
+                                        <button class="btn btn-primary m-2 text-center" onclick="submitForm()">Submit</button>
                                 </div>
                             </div>
                         </div>
