@@ -1,5 +1,10 @@
 <?php
 include("connection/connectdb.php");
+
+if(isset($_GET['save'])){
+    $edit_id = $_GET['save'];
+}
+
 ?>
 <style>
     .form-container {
@@ -794,15 +799,13 @@ include("connection/connectdb.php");
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="panel-b2-dmage-yes"><input
-                                                        name="panel_b2_damage" type="radio"
-                                                        id="panel-b2-dmage-yes">
+                                                <label class="rdiobox" for="panel-b2-damage-yes"><input
+                                                        name="panel_b2_damage" type="radio" id="panel-b2-damage-yes">
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="panel-b2-dmage-no"><input
-                                                        name="panel_b2_damage" type="radio"
-                                                        id="panel-b2-dmage-no">
+                                                <label class="rdiobox" for="panel-b2-damage-no"><input
+                                                        name="panel_b2_damage" type="radio" id="panel-b2-damage-no">
                                                     <span>No</span></label>
                                             </div>
                                         </div>
@@ -817,7 +820,7 @@ include("connection/connectdb.php");
                         </div>
                     </div>
 
-                    <div class="list-group-item py-4 form-container" id="form14">
+                    <div class="list-group-item py-4 form-container" id="form15">
                         <div class="form-heading-1 mb-0 me-2">Panel C1 Damage</div>
                         <div class="col-lg-12 col-md-12">
                             <div class="card-body">
@@ -825,23 +828,191 @@ include("connection/connectdb.php");
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="panel-c1-dmage-yes"><input
-                                                        name="panel_c1_damage" type="radio"
-                                                        id="panel-c1-dmage-yes">
+                                                <label class="rdiobox" for="panel-c1-damage-yes"><input
+                                                        name="panel_c1_damage" type="radio" id="panel-c1-damage-yes">
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="panel-c1-dmage-no"><input
-                                                        name="panel_c1_damage" type="radio"
-                                                        id="panel-c1-dmage-no">
+                                                <label class="rdiobox" for="panel-c1-damage-no"><input
+                                                        name="panel_c1_damage" type="radio" id="panel-c1-damage-no">
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
                                     <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form13')">Previous</button>
-                                        <button class="btn btn-primary m-2 text-center" onclick="submitForm()">Submit</button>
+                                        onclick="previousForm('form14')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form16')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form16">
+                        <div class="form-heading-1 mb-0 me-2">Panel C2 Damage</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c2-damage-yes"><input
+                                                        name="panel_c2_damage" type="radio" id="panel-c2-damage-yes">
+                                                    <span>Yes</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c2-damage-no"><input
+                                                        name="panel_c2_damage" type="radio" id="panel-c2-damage-no">
+                                                    <span>No</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form15')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form17')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form17">
+                        <div class="form-heading-1 mb-0 me-2">Panel C3 Status</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c3-status-working"><input
+                                                        name="panel_c3_status" type="radio"
+                                                        id="panel-c3-status-working">
+                                                    <span>Working</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c3-status-not-working"><input
+                                                        name="panel_c3_status" type="radio"
+                                                        id="panel-c3-status-not-working">
+                                                    <span>Not Working</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c3-status-missing"><input
+                                                        name="panel_c3_status" type="radio"
+                                                        id="panel-c3-status-missing">
+                                                    <span>Missing</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-heading-1 mb-0 me-2">Panel C3 Damage
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c3-damage-yes"><input
+                                                        name="panel_c3_damage" type="radio" id="panel-c3-damage-yes">
+                                                    <span>Yes</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c3-damage-no"><input
+                                                        name="panel_c3_damage" type="radio" id="panel-c3-damage-no">
+                                                    <span>No</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form16')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form18')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form18">
+                        <div class="form-heading-1 mb-0 me-2">Panel C4 Status</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c4-status-working"><input
+                                                        name="panel_c4_status" type="radio"
+                                                        id="panel-c4-status-working">
+                                                    <span>Working</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c4-status-not-working"><input
+                                                        name="panel_c4_status" type="radio"
+                                                        id="panel-c4-status-not-working">
+                                                    <span>Not Working</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c4-status-missing"><input
+                                                        name="panel_c4_status" type="radio"
+                                                        id="panel-c4-status-missing">
+                                                    <span>Missing</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-heading-1 mb-0 me-2">Panel C4 Damage
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c4-damage-yes"><input
+                                                        name="panel_c4_damage" type="radio" id="panel-c4-damage-yes">
+                                                    <span>Yes</span></label>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="rdiobox" for="panel-c4-damage-no"><input
+                                                        name="panel_c4_damage" type="radio" id="panel-c4-damage-no">
+                                                    <span>No</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form17')">Previous</button>
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form19')">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item py-4 form-container" id="form19">
+                        <div class="form-heading-1 mb-0 me-2">Remark</div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <label for="validationTextarea" class="form-label"></label>
+                                                    <div class="col-lg">
+                                                        <textarea class="form-control mb-4"
+                                                            placeholder="Write remark here if any..."
+                                                            rows="3"></textarea>
+                                                    </div>
+                                    </div>
+                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
+                                    <button class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form18')">Previous</button>
+                                        <button class="btn btn-primary m-2 text-center" name="save" onclick="submitForm()">Submit</button>
                                 </div>
                             </div>
                         </div>

@@ -122,12 +122,31 @@ include("connection/connectdb.php");
   }
 }
 
+.selected {
+    border: 2px solid #047cbc;
+    /* background-color: #f0f0f0; */
+}
+
+    .cursor-pointer{
+    cursor: pointer;
+}
 </style>
+
 <script>
-    function toggleSelected(element) {
-        element.classList.toggle('selected');
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all elements with class js-ag-collection_item
+        var collectionItems = document.querySelectorAll('.js-ag-collection_item');
+
+        // Add click event listener to each item
+        collectionItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                // Toggle the 'selected' class for the clicked item
+                item.classList.toggle('selected');
+            });
+        });
+    });
 </script>
+
 
 
 <div class="row row-sm">
@@ -135,7 +154,7 @@ include("connection/connectdb.php");
         <div class="card custom-card">
             <div class="card-body">
                 <div class="list-group">
-                    <!-- <div class="list-group-item py-4 form-container active" id="form1">
+                    <div class="list-group-item py-4 form-container active" id="form1">
                         <div class="form-heading-1 mb-0 me-2">Select Product</div>
                         <div class="col-lg-12 col-md-12">
                             <div class="card-body">
@@ -161,110 +180,7 @@ include("connection/connectdb.php");
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                    
-                    <div class="list-group-item py-4 form-container active" id="form1">
-                        <div class="form-heading-1 mb-0 me-2">Select Product</div>
-                        <div class="col-lg-12 col-md-12">
-                            <div class="card-body">
-                                <div class="form-row">
-                                    <div class="ag-collection-block">
-                                        <div class="ag-format-container">
-                                            <div role="list" class="ag-collection_list">
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9d8f386a4.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Keyboard not working; key(s) missing/not working</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9cb0aceb0.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">CD/DVD Drive not working</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9cad03f51.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Touchpad not working; Left/Right click faulty</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9cab2beab.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Battery Dead; back up less than 60 minutes / Cycle count more than 800</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9ceeabfbd.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Speakers not working; faulty/cracked sound</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9d25e5a56.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Wi-Fi not working</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9d5a638a4.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Faulty Charger; wire cut, Not available</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9ddc6abb4.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">USB Port not working</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\60ab9cad03f51.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Web Cam not working</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\6148560d0c3b3.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Charging Port not working</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\61487866ea5a5-removebg-preview.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Hard Drive Missing/Defective</div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
-                                                    <div class="ag-collection_info">
-                                                        <img src="assets\images\functionality-icons\62e0d8a3d520e-removebg-preview.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
-                                                        <div class="ag-collection_text text-center">Motherboard issue - auto restart, hanging, heating/not booting</div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary m-2 text-center" onclick="nextForm('form2')">Next</button>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    </div>                    
 
                     <div class="list-group-item py-4 form-container" id="form2">
                         <div class="form-heading-1 mb-0 me-2">Select Brand</div>
@@ -607,40 +523,106 @@ include("connection/connectdb.php");
                     </div>
 
                     <div class="list-group-item py-4 form-container" id="form7">
-                        <div class="form-heading-1 mb-0 me-2">Does your device function properly?</div>
+                        <div class="form-heading-1 mb-0 me-2">Select Product</div>
                         <div class="col-lg-12 col-md-12">
                             <div class="card-body">
                                 <div class="form-row">
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <div class="d-flex flex-row flex-wrap w-full">
-                                            <section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0">
-                                                <div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid">
-                                                    <div class="d-flex flex-col items-center justify-center m-4 w-28 h-28">
-                                                        <img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9d8f386a4.png">
-                                                    </div>
-                                                    <div class="d-flex flex-col items-center w-full flex-1 bg-gray-50">
-                                                        <div class="text-center caption p-4 d-flex items-center justify-center">Keyboard not working; key(s) missing/not working	</div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0">
-                                                <div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid">
-                                                    <div class="d-flex flex-col items-center justify-center m-4 w-28 h-28">
-                                                        <img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9cb0aceb0.png">
-                                                    </div>
-                                                    <div class="d-flex flex-col items-center w-full flex-1 bg-gray-50">
-                                                        <div class="text-center caption p-4 d-flex items-center justify-center">CD/DVD Drive not working</div>
+                                    <div class="ag-collection-block">
+                                        <div class="ag-format-container">
+                                            <div role="list" class="ag-collection_list">
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9d8f386a4.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Keyboard not working; key(s) missing/not working</div>
                                                     </div>
                                                 </div>
-                                            </section>
-                                            <section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9cad03f51.png"></div><div class="d-flex flex-col items-center w-full flex-1 bg-gray-50"><div class="text-center caption p-4 d-flex items-center justify-center">Touchpad not working; Left/Right click faulty</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9cab2beab.png"></div><div class="d-flex flex-col items-center w-full flex-1 bg-gray-50"><div class="text-center caption p-4 d-flex items-center justify-center">Battery Dead; back up less than 60 minutes / Cycle count more than 800</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9ceeabfbd.png"></div><div class="d-flex flex-col items-center w-full flex-1 bg-gray-50"><div class="text-center caption p-4 d-flex items-center justify-center">Speakers not working; faulty/cracked sound</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9d25e5a56.png"></div><div class="d-flex flex-col items-center w-full flex-1 bg-gray-50"><div class="text-center caption p-4 d-flex items-center justify-center">Wi-Fi not working</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9d5a638a4.png"></div><div class="d-flex flex-col items-center w-full flex-1 bg-gray-50"><div class="text-center caption p-4 d-flex items-center justify-center">Faulty Charger; wire cut, Not available</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9ddc6abb4.png"></div><div class="d-flex flex-col items-center w-full flex-1 bg-gray-50"><div class="text-center caption p-4 d-flex items-center justify-center">USB Port not working</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid border-error"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/60ab9e0f2bf81.png"></div><div class="d-flex flex-col items-center w-full flex-1 text-primary-contrast-text border-error bg-error "><div class="text-center caption p-4 d-flex items-center justify-center">Web Cam not working</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid border-error"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/6148560d0c3b3.png"></div><div class="d-flex flex-col items-center w-full flex-1 text-primary-contrast-text border-error bg-error "><div class="text-center caption p-4 d-flex items-center justify-center">Charging Port not working</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid border-error"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/61487866ea5a5.png"></div><div class="d-flex flex-col items-center w-full flex-1 text-primary-contrast-text border-error bg-error "><div class="text-center caption p-4 d-flex items-center justify-center">Hard Drive Missing/Defective</div></div></div></section><section class="d-flex pr-2 sm:pr-3 mt-5 pr-1 w-1/2 sm:w-1/4 mb-4 sm:mb-0"><div class="cursor-pointer d-flex flex-col items-center rounded-md w-full border border-solid border-error"><div class="d-flex flex-col items-center justify-center m-4 w-28 h-28"><img alt="cashify" class="img-resp" loading="lazy" fetchpriority="low" src="https://s3n.cashify.in/cashify/productLinePartVariation/img/xhdpi/62e0d8a3d520e.png"></div><div class="d-flex flex-col items-center w-full flex-1 text-primary-contrast-text border-error bg-error "><div class="text-center caption p-4 d-flex items-center justify-center">Motherboard issue - auto restart, hanging, heating/not booting</div></div></div></section></div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9cb0aceb0.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">CD/DVD Drive not working</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9cad03f51.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Touchpad not working; Left/Right click faulty</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9cab2beab.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Battery Dead; back up less than 60 minutes / Cycle count more than 800</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9ceeabfbd.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Speakers not working; faulty/cracked sound</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9d25e5a56.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Wi-Fi not working</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9d5a638a4.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Faulty Charger; wire cut, Not available</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9ddc6abb4.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">USB Port not working</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\60ab9cad03f51.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Web Cam not working</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\6148560d0c3b3.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Charging Port not working</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\61487866ea5a5-removebg-preview.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Hard Drive Missing/Defective</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div role="listitem" class="js-ag-collection_item cursor-pointer">
+                                                    <div class="ag-collection_info">
+                                                        <img src="assets\images\functionality-icons\62e0d8a3d520e-removebg-preview.png" class="ag-collection_img" loading="lazy" sizes="(max-width: 479px) 52vw, (max-width: 767px) 26vw, (max-width: 991px) 134.3828125px, (max-width: 1439px) 188.296875px, 224.234375px" alt="" />
+                                                        <div class="ag-collection_text text-center">Motherboard issue - auto restart, hanging, heating/not booting</div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
+                                </div>
+                                <button class="btn btn-primary m-2 text-center"
                                         onclick="previousForm('form6')">Previous</button>
                                     <button class="btn btn-primary m-2 text-center"
                                         onclick="nextForm('form8')">Next</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -708,7 +690,7 @@ include("connection/connectdb.php");
                                     </div>
                                     <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
                                     <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form6')">Previous</button>
+                                        onclick="previousForm('form7')">Previous</button>
                                     <button class="btn btn-primary m-2 text-center"
                                         onclick="nextForm('form9')">Next</button>
                                 </div>

@@ -42,7 +42,48 @@ include("connection/connectdb.php");
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-id="1">
+                                <?php
+                                $select_query = "SELECT * FROM `inspection_sheet_data_cashify_model`";
+                                $result_query = mysqli_query($con, $select_query);
+                                while($row = mysqli_fetch_assoc($result_query)){
+                                    $id = $row['id'];
+                                    $Product = $row['Product'];
+                                    $Brand = $row['Brand'];
+                                    $Model = $row['Model'];
+                                    $Power = $row['Power'];
+                                    $Processor = $row['Processor'];
+                                    $RAM = $row['RAM'];
+                                    $Hard_Disk = $row['Hard_Disk'];
+                                    $Screen_Size = $row['Screen_Size'];
+                                    $External_Graphic_Card = $row['External_Graphic_Card'];
+                                    $Functionality = $row['Functionality'];
+                                    $Age_of_device = $row['Age_of_device'];
+                                    $Screen_Condition = $row['Screen_Condition'];
+                                    $Physical_Condition = $row['Physical_Condition'];
+                                    echo "<tr>
+                                    <td>$id</td>
+                                    <td>$Product</td>
+                                    <td>$Brand</td>
+                                    <td>$Model</td>
+                                    <td>$Power</td>
+                                    <td>$Processor</td>
+                                    <td>$RAM</td>
+                                    <td>$Hard_Disk</td>
+                                    <td>$Screen_Size</td>
+                                    <td>$External_Graphic_Card</td>
+                                    <td>$Functionality</td>
+                                    <td>$Age_of_device</td>
+                                    <td>$Screen_Condition</td>
+                                    <td>$Physical_Condition</td>
+                                    <td style='width: 100px'>
+                                        <a href='index.php?Form_Edit_Inspection_Sheet2=$id' class='btn btn-primary fs-14 text-white edit-icn' title='Edit'>
+                                            <i class='fe fe-edit'></i>
+                                        </a>
+                                    </td>
+                                </tr>";
+                                }
+                                ?>
+                                <!-- <tr data-id="1">
                                     <td>1</td>
                                     <td>Laptop</td>
                                     <td>HP</td>
@@ -74,7 +115,7 @@ include("connection/connectdb.php");
                                     <td>80 GB HDD</td>
                                     <td>12-13 Inch</td>
                                     <td>Graphic Card Not Available</td>
-                                    <td>DC/DVD Drive Not Working</td>
+                                    <td>CD/DVD Drive Not Working</td>
                                     <td>Between 1 and 3 year</td>
                                     <td>Good</td>
                                     <td>Good</td>
@@ -125,7 +166,7 @@ include("connection/connectdb.php");
                                             <i class="fe fe-edit"></i>
                                         </a>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>

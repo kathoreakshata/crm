@@ -143,7 +143,7 @@ include("connection/connectdb.php");
                                     <td>$Panel_C4_Damage</td>
                                     <td>$Remark</td>
                                     <td style='width: 100px'>
-                                        <a href='index.php?Form_Edit_Inspection_Sheet' class='btn btn-primary fs-14 text-white edit-icn' title='Edit'>
+                                        <a href='index.php?Form_Edit_Inspection_Sheet=<?php $id ?>' class='btn btn-primary fs-14 text-white edit-icn' title='Edit'>
                                             <i class='fe fe-edit'></i>
                                         </a>
                                     </td>
