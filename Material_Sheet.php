@@ -82,7 +82,7 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-label">User Name</label>
-                            <input type="text" name="Username" class="form-control" id="validationCustom01" value="Mark" required>
+                            <input type="text" name="Username" class="form-control" id="validationCustom01" required>
                             <div class="valid-feedback">
                             User Name
                             </div>
@@ -90,25 +90,13 @@ if (isset($_POST['upload']) && $_POST['upload'] == 'upload csv') {
                     </div>
                     <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">Company Name</label>
-                        <input type="text" name="Companyname" class="form-control" id="validationCustom01" value="Mark" required>
+                        <input type="text" name="Companyname" class="form-control" id="validationCustom01"  required>
                         <div class="valid-feedback">
                             Company Name
                         </div>
                     </div>
 
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">QC Report</label>
-                        <select class="form-select" name="QCreport" id="validationCustom04" required>
-                            <option selected disabled value="">1</option>
-                            <option value="1">2</option>
-                            <option value="2">3</option>
-                            <option value="13">4</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a QC Report.
-                        </div>
-                    </div>
-                    <div class="col-12">
+                    <div class="col-4">
                         <label for="formFile" class="form-label">Upload Material Sheet</label>
                         <input class="form-control" type="file" id="formFile" name="csv">
                         <br>
