@@ -1,4 +1,4 @@
-﻿Sr No,Asset Type,Brand,Model,Power on (Yes/No),Accessories,CPU Speed,Manufacturer,Ram,Ram Type,Slots Qty,HDD Size,Display Size,Integrated WebCam (Y/N),Battery ,Wifi (Y/N),"Physical Damage (Yes/No), If Yes, Mention What","Functional Issues (Yes/No), If Yes, Mention what",Repairable (Yes/No),Additional Remarks,Price,
+Sr No,Asset Type,Brand,Model,Power on (Yes/No),Accessories,CPU Speed,Manufacturer,Ram,Ram Type,Slots Qty,HDD Size,Display Size,Integrated WebCam (Y/N),Battery ,Wifi (Y/N),"Physical Damage (Yes/No), If Yes, Mention What","Functional Issues (Yes/No), If Yes, Mention what",Repairable (Yes/No),Additional Remarks,Price,
 1,WINDOWS,DELL,5300,YES,,I5 8TH,INTEL,16 GB,DDR-4,2,256 SSD,"14""",YES,GOOD,YES,OK,OK,YES,OK,,
 2,WINDOWS,DELL,5400,YES,,I5 8TH,INTEL,16 GB,DDR-4,2,256 SSD,"14""",YES,EXCELENT,YES,OK,OK,YES,OK,,
 3,WINDOWS,DELL,5440,YES,,I5 4TH,INTEL,4 GB,DDR-3,2,500 GB,"14""",YES,POOR,YES,SCREEN LINE,SCREEN LINE,YES,SCREEN LINE,,
