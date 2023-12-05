@@ -1,8 +1,48 @@
 <?php
 include("connection/connectdb.php");
 
-if(isset($_GET['save'])){
-    $edit_id = $_GET['save'];
+if (isset($_GET['Form_Edit_Inspection_Sheet'])) {
+    $edit_id = $_GET['Form_Edit_Inspection_Sheet'];
+
+    $get_data = "SELECT * FROM `inspection_sheet_data` WHERE id = $edit_id";
+    $result = mysqli_query($con, $get_data);
+    $row = mysqli_fetch_assoc($result);
+
+    $Product = $row['Product'];
+    $Brand = $row['Brand'];
+    $Model = $row['Model'];
+    $Power = $row['Power'];
+    $Processor_Brand = $row['Processor_Brand'];
+    $Processor_Generation = $row['Processor_Generation'];
+    $Processor_Status = $row['Processor_Status'];
+    $Processor_Damage = $row['Processor_Damage'];
+    $Battery_Status = $row['Battery_Status'];
+    $Battery_Damage = $row['Battery_Damage'];
+    $Motherboard_Status = $row['Motherboard_Status'];
+    $Motherboard_Damage = $row['Motherboard_Damage'];
+    $Keyboard_Status = $row['Keyboard_Status'];
+    $Keyboard_Damage = $row['Keyboard_Damage'];
+    $Touchpad_Status = $row['Touchpad_Status'];
+    $Touchpad_Damage = $row['Touchpad_Damage'];
+    $HDD_Status = $row['HDD_Status'];
+    $HDD_Storage = $row['HDD_Storage'];
+    $HDD_Damage = $row['HDD_Damage'];
+    $RAM_Status = $row['RAM_Status'];
+    $RAM_Type = $row['RAM_Type'];
+    $RAM_Storage = $row['RAM_Storage'];
+    $RAM_Damage = $row['RAM_Damage'];
+    $Panel_A_Damage = $row['Panel_A_Damage'];
+    $Panel_B1_Status = $row['Panel_B1_Status'];
+    $Panel_B1_Size = $row['Panel_B1_Size'];
+    $Panel_B1_Damage = $row['Panel_B1_Damage'];
+    $Panel_B2_Damage = $row['Panel_B2_Damage'];
+    $Panel_C1_Damage = $row['Panel_C1_Damage'];
+    $Panel_C2_Damage = $row['Panel_C2_Damage'];
+    $Panel_C3_Status = $row['Panel_C3_Status'];
+    $Panel_C3_Damage = $row['Panel_C3_Damage'];
+    $Panel_C4_Status = $row['Panel_C4_Status'];
+    $Panel_C4_Damage = $row['Panel_C4_Damage'];
+    $Remark = $row['Remark'];
 }
 
 ?>
@@ -21,13 +61,16 @@ if(isset($_GET['save'])){
         <div class="card custom-card">
             <div class="card-body">
                 <div class="list-group">
-                    <div class="list-group-item py-4 form-container active" id="form1">
+                    
+                <form action="" method="post">
+                <div class="list-group-item py-4 form-container active" id="form1">
                         <div class="form-heading-1 mb-0 me-2">Select Type Of Product</div>
                         <div class="col-lg-12 col-md-12">
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <select class="form-select m-2" id="validationCustom14" name="select_product">
+                                            <option selected value="<?php echo $Product ?>"><?php echo $Product ?></option>
                                             <option value="laptop">Laptop</option>
                                             <option value="cpu">CPU</option>
                                             <option value="lcd">LCD</option>
@@ -43,8 +86,8 @@ if(isset($_GET['save'])){
                                         </select>
                                     </div>
                                     <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form2')">Next</button>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form2')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -59,39 +102,53 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="dell"><input name="brand_radio" type="radio"
-                                                        id="dell"> <span>Dell</span></label>
+                                                        id="dell" <?php if ($Brand == "Dell") {
+                                                            echo "checked";
+                                                        } ?>> <span>Dell</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="lenovo"><input name="brand_radio"
-                                                        type="radio" id="lenovo"> <span>Lenovo</span></label>
+                                                        type="radio" id="lenovo" <?php if ($Brand == "Lenovo") {
+                                                            echo "checked";
+                                                        } ?>> <span>Lenovo</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="acer"><input name="brand_radio" type="radio"
-                                                        id="acer"> <span>Acer</span></label>
+                                                        id="acer" <?php if ($Brand == "Acer") {
+                                                            echo "checked";
+                                                        } ?>> <span>Acer</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hp"><input name="brand_radio" type="radio"
-                                                        id="hp"> <span>HP</span></label>
+                                                        id="hp" <?php if ($Brand == "HP") {
+                                                            echo "checked";
+                                                        } ?>> <span>HP</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="apple"><input name="brand_radio"
-                                                        type="radio" id="apple"> <span>Apple</span></label>
+                                                        type="radio" id="apple" <?php if ($Brand == "Apple") {
+                                                            echo "checked";
+                                                        } ?>> <span>Apple</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="asus"><input name="brand_radio" type="radio"
-                                                        id="asus"> <span>Asus</span></label>
+                                                        id="asus" <?php if ($Brand == "Asus") {
+                                                            echo "checked";
+                                                        } ?>> <span>Asus</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="other"><input name="brand_radio"
-                                                        type="radio" id="other"> <span>Other</span></label>
+                                                        type="radio" id="other" <?php if ($Brand == "Other") {
+                                                            echo "checked";
+                                                        } ?>> <span>Other</span></label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form1')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form3')">Next</button>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form1')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form3')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -106,23 +163,29 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="5300"><input name="model" type="radio"
-                                                        id="5300"> <span>5300</span></label>
+                                                        id="5300" <?php if ($Model == "5300") {
+                                                            echo "checked";
+                                                        } ?>> <span>5300</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="5400"><input name="model" type="radio"
-                                                        id="5400"> <span>5400</span></label>
+                                                        id="5400" <?php if ($Model == "5400") {
+                                                            echo "checked";
+                                                        } ?>> <span>5400</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="5500"><input name="model" type="radio"
-                                                        id="5500"> <span>5500</span></label>
+                                                        id="5500" <?php if ($Model == "5500") {
+                                                            echo "checked";
+                                                        } ?>> <span>5500</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form2')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form4')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form2')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form4')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -137,19 +200,23 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="yes"><input name="power" type="radio"
-                                                        id="yes"> <span>Yes</span></label>
+                                                        id="yes" <?php if ($Power == "Yes") {
+                                                            echo "checked";
+                                                        } ?>> <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="no"><input name="power" type="radio"
-                                                        id="no"> <span>No</span></label>
+                                                        id="no" <?php if ($Power == "No") {
+                                                            echo "checked";
+                                                        } ?>> <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form3')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form5')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form3')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form5')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -162,6 +229,7 @@ if(isset($_GET['save'])){
                                 <div class="form-row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <select class="form-select m-2" name="select_processor">
+                                            <option value="<?php echo $Processor_Brand ?>"><?php echo $Processor_Brand ?></option>
                                             <option value="amd">AMD</option>
                                             <option value="atom">Atom</option>
                                             <option value="intel">Intel</option>
@@ -179,6 +247,7 @@ if(isset($_GET['save'])){
                                 <div class="form-row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <select class="form-select m-2" name="select_generation">
+                                            <option value="<?php echo $Processor_Generation ?>"><?php echo $Processor_Generation ?></option>
                                             <option value="2gen">2nd Gen</option>
                                             <option value="3gen">3rd Gen</option>
                                             <option value="4gen">4th Gen</option>
@@ -203,15 +272,21 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="working"><input name="processor_status"
-                                                        type="radio" id="working"> <span>Working</span></label>
+                                                        type="radio" id="working" <?php if ($Processor_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>> <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="not-working"><input name="processor_status"
-                                                        type="radio" id="not-working"> <span>Not Working</span></label>
+                                                        type="radio" id="not-working" <?php if ($Processor_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>> <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="missing"><input name="processor_status"
-                                                        type="radio" id="missing"> <span>Missing</span></label>
+                                                        type="radio" id="missing" <?php if ($Processor_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>> <span>Missing</span></label>
                                             </div>
                                         </div>
                                     </div>
@@ -226,21 +301,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="processor-damage-yes"><input
-                                                        name="processor_damage" type="radio" id="processor-damage-yes">
+                                                        name="processor_damage" type="radio" id="processor-damage-yes" <?php if ($Processor_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="processor-damage-no"><input
-                                                        name="processor_damage" type="radio" id="processor-damage-no">
+                                                        name="processor_damage" type="radio" id="processor-damage-no" <?php if ($Processor_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form4')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form6')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form4')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form6')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -255,18 +334,27 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="battery-status-working"><input
-                                                        name="battery_status" type="radio" id="battery-status-working">
+                                                        name="battery_status" type="radio" id="battery-status-working" <?php if ($Battery_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="battery-status-not-working"><input
                                                         name="battery_status" type="radio"
-                                                        id="battery-status-not-working"> <span>Not
+                                                        id="battery-status-not-working" <?php if (
+                                                            $Battery_Status == "Not
+                                                        Working"
+                                                        ) {
+                                                            echo "checked";
+                                                        } ?>> <span>Not
                                                         Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="battery-status-missing"><input
-                                                        name="battery_status" type="radio" id="battery-status-missing">
+                                                        name="battery_status" type="radio" id="battery-status-missing" <?php if ($Battery_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Missing</span></label>
                                             </div>
                                         </div>
@@ -282,21 +370,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="battery-damage-yes"><input
-                                                        name="battery_damage" type="radio" id="battery-damage-yes">
+                                                        name="battery_damage" type="radio" id="battery-damage-yes" <?php if ($Battery_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="battery-damage-no"><input
-                                                        name="battery_damage" type="radio" id="battery-damage-no">
+                                                        name="battery_damage" type="radio" id="battery-damage-no" <?php if ($Battery_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form5')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form7')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form5')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form7')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -310,20 +402,22 @@ if(isset($_GET['save'])){
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="motherboard-status-working"><input
-                                                        name="motherboard_status" type="radio"
-                                                        id="motherboard-status-working"> <span>Working</span></label>
+                                                <label class="rdiobox" for="motherboard-status-working">
+                                                    <input name="motherboard_status" type="radio" id="motherboard-status-working" <?php if ($Motherboard_Status == "Working") {
+                                                        echo "checked";
+                                                    } ?>> <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="motherboard-status-not-working"><input
-                                                        name="motherboard_status" type="radio"
-                                                        id="motherboard-status-not-working"> <span>Not
-                                                        Working</span></label>
+                                                <label class="rdiobox" for="motherboard-status-not-working">
+                                                    <input name="motherboard_status" type="radio" id="motherboard-status-not-working" <?php if ($Motherboard_Status == "Not Working") {
+                                                        echo "checked";
+                                                    } ?>> <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
-                                                <label class="rdiobox" for="motherboard-status-missing"><input
-                                                        name="motherboard_status" type="radio"
-                                                        id="motherboard-status-missing"> <span>Missing</span></label>
+                                                <label class="rdiobox" for="motherboard-status-missing">
+                                                    <input name="motherboard_status" type="radio" id="motherboard-status-missing" <?php if ($Motherboard_Status == "Missing") {
+                                                        echo "checked";
+                                                    } ?>> <span>Missing</span></label>
                                             </div>
                                         </div>
                                     </div>
@@ -339,20 +433,24 @@ if(isset($_GET['save'])){
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="motherboard-damage-yes"><input
                                                         name="motherboard_damage" type="radio"
-                                                        id="motherboard-damage-yes"> <span>Yes</span></label>
+                                                        id="motherboard-damage-yes" <?php if ($Motherboard_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>> <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="motherboard-damage-no"><input
                                                         name="motherboard_damage" type="radio"
-                                                        id="motherboard-damage-no"> <span>No</span></label>
+                                                        id="motherboard-damage-no" <?php if ($Motherboard_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>> <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form6')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form8')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form6')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form8')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -368,18 +466,27 @@ if(isset($_GET['save'])){
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="keyboard-status-working"><input
                                                         name="keyboard_status" type="radio"
-                                                        id="keyboard-status-working"> <span>Working</span></label>
+                                                        id="keyboard-status-working" <?php if ($Keyboard_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>> <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="keyboard-status-not-working"><input
                                                         name="keyboard_status" type="radio"
-                                                        id="keyboard-status-not-working"> <span>Not
+                                                        id="keyboard-status-not-working" <?php if (
+                                                            $Keyboard_Status == "Not
+                                                        Working"
+                                                        ) {
+                                                            echo "checked";
+                                                        } ?>> <span>Not
                                                         Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="keyboard-status-missing"><input
                                                         name="keyboard_status" type="radio"
-                                                        id="keyboard-status-missing"> <span>Missing</span></label>
+                                                        id="keyboard-status-missing" <?php if ($Keyboard_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>> <span>Missing</span></label>
                                             </div>
                                         </div>
                                     </div>
@@ -394,21 +501,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="keyboard-damage-yes"><input
-                                                        name="keyboard_damage" type="radio" id="keyboard-damage-yes">
+                                                        name="keyboard_damage" type="radio" id="keyboard-damage-yes" <?php if ($Keyboard_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="keyboard-damage-no"><input
-                                                        name="keyboard_damage" type="radio" id="keyboard-damage-no">
+                                                        name="keyboard_damage" type="radio" id="keyboard-damage-no" <?php if ($Keyboard_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form7')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form9')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form7')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form9')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -424,18 +535,24 @@ if(isset($_GET['save'])){
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="touchpad-status-working"><input
                                                         name="touchpad_status" type="radio"
-                                                        id="touchpad-status-working"> <span>Working</span></label>
+                                                        id="touchpad-status-working" <?php if ($Touchpad_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>> <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="touchpad-status-not-working"><input
                                                         name="touchpad_status" type="radio"
-                                                        id="touchpad-status-not-working"> <span>Not
+                                                        id="touchpad-status-not-working" <?php if ($Touchpad_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>> <span>Not
                                                         Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="touchpad-status-missing"><input
                                                         name="touchpad_status" type="radio"
-                                                        id="touchpad-status-missing"> <span>Missing</span></label>
+                                                        id="touchpad-status-missing" <?php if ($Touchpad_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>> <span>Missing</span></label>
                                             </div>
                                         </div>
                                     </div>
@@ -450,21 +567,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="touchpad-damage-yes"><input
-                                                        name="touchpad_damage" type="radio" id="touchpad-damage-yes">
+                                                        name="touchpad_damage" type="radio" id="touchpad-damage-yes" <?php if ($Touchpad_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="touchpad-damage-no"><input
-                                                        name="touchpad_damage" type="radio" id="touchpad-damage-no">
+                                                        name="touchpad_damage" type="radio" id="touchpad-damage-no" <?php if ($Touchpad_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form8')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form10')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form8')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form10')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -479,17 +600,23 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-status-working"><input name="hdd_status"
-                                                        type="radio" id="hdd-status-working">
+                                                        type="radio" id="hdd-status-working" <?php if ($HDD_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-status-not-working"><input
-                                                        name="hdd_status" type="radio" id="hdd-status-not-working">
+                                                        name="hdd_status" type="radio" id="hdd-status-not-working" <?php if ($HDD_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-status-missing"><input name="hdd_status"
-                                                        type="radio" id="hdd-status-missing">
+                                                        type="radio" id="hdd-status-missing" <?php if ($HDD_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Missing</span></label>
                                             </div>
                                         </div>
@@ -505,22 +632,30 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-storage-250gb"><input name="hdd_storage"
-                                                        type="radio" id="hdd-storage-250gb">
+                                                        type="radio" id="hdd-storage-250gb" <?php if ($HDD_Storage == "250 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>250 GB</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-storage-500gb"><input name="hdd_storage"
-                                                        type="radio" id="hdd-storage-500gb">
+                                                        type="radio" id="hdd-storage-500gb" <?php if ($HDD_Storage == "500 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>500 GB</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-storage-256gbssd"><input
-                                                        name="hdd_storage" type="radio" id="hdd-storage-256gbssd">
+                                                        name="hdd_storage" type="radio" id="hdd-storage-256gbssd" <?php if ($HDD_Storage == "256 GB SSD") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>256 GB SSD</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-storage-512gbssd"><input
-                                                        name="hdd_storage" type="radio" id="hdd-storage-512gbssd">
+                                                        name="hdd_storage" type="radio" id="hdd-storage-512gbssd" <?php if ($HDD_Storage == "512 GB SSD") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>512 GB SSD</span></label>
                                             </div>
                                         </div>
@@ -536,21 +671,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-damage-yes"><input name="hdd_damage"
-                                                        type="radio" id="hdd-damage-yes">
+                                                        type="radio" id="hdd-damage-yes" <?php if ($HDD_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="hdd-damage-no"><input name="hdd_damage"
-                                                        type="radio" id="hdd-damage-no">
+                                                        type="radio" id="hdd-damage-no" <?php if ($HDD_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form9')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form11')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form9')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form11')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -565,17 +704,23 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-status-working"><input name="ram_status"
-                                                        type="radio" id="ram-status-working">
+                                                        type="radio" id="ram-status-working" <?php if ($RAM_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-status-not-working"><input
-                                                        name="ram_status" type="radio" id="ram-status-not-working">
+                                                        name="ram_status" type="radio" id="ram-status-not-working" <?php if ($RAM_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-status-missing"><input name="ram_status"
-                                                        type="radio" id="ram-status-missing">
+                                                        type="radio" id="ram-status-missing" <?php if ($RAM_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Missing</span></label>
                                             </div>
                                         </div>
@@ -591,12 +736,16 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-type-ddr3"><input name="ram_type"
-                                                        type="radio" id="ram-type-ddr3">
+                                                        type="radio" id="ram-type-ddr3" <?php if ($RAM_Type == "DDR 3") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>DDR 3</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-type-ddr4"><input name="ram_type"
-                                                        type="radio" id="ram-type-ddr4">
+                                                        type="radio" id="ram-type-ddr4" <?php if ($RAM_Type == "DDR 4") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>DDR 4</span></label>
                                             </div>
                                         </div>
@@ -612,27 +761,37 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-storage-4gb"><input name="ram_storage"
-                                                        type="radio" id="ram-storage-4gb">
+                                                        type="radio" id="ram-storage-4gb" <?php if ($RAM_Storage == "4 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>4 GB</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-storage-8gb"><input name="ram_storage"
-                                                        type="radio" id="ram-storage-8gb">
+                                                        type="radio" id="ram-storage-8gb" <?php if ($RAM_Storage == "8 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>8 GB</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-storage-16gb"><input name="ram_storage"
-                                                        type="radio" id="ram-storage-16gb">
+                                                        type="radio" id="ram-storage-16gb" <?php if ($RAM_Storage == "16 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>16 GB</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-storage-32gb"><input name="ram_storage"
-                                                        type="radio" id="ram-storage-32gb">
+                                                        type="radio" id="ram-storage-32gb" <?php if ($RAM_Storage == "32 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>32 GB</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-storage-64gb"><input name="ram_storage"
-                                                        type="radio" id="ram-storage-64gb">
+                                                        type="radio" id="ram-storage-64gb" <?php if ($RAM_Storage == "64 GB") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>64 GB</span></label>
                                             </div>
                                         </div>
@@ -648,21 +807,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-damage-yes"><input name="ram_damage"
-                                                        type="radio" id="ram-damage-yes">
+                                                        type="radio" id="ram-damage-yes" <?php if ($RAM_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="ram-damage-no"><input name="ram_damage"
-                                                        type="radio" id="ram-damage-no">
+                                                        type="radio" id="ram-damage-no" <?php if ($RAM_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form10')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form12')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form10')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form12')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -677,21 +840,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-a-damage-yes"><input
-                                                        name="panel_a_damage" type="radio" id="panel-a-damage-yes">
+                                                        name="panel_a_damage" type="radio" id="panel-a-damage-yes" <?php if ($Panel_A_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-a-damage-no"><input
-                                                        name="panel_a_damage" type="radio" id="panel-a-damage-no">
+                                                        name="panel_a_damage" type="radio" id="panel-a-damage-no" <?php if ($Panel_A_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form11')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form13')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form11')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form13')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -707,19 +874,25 @@ if(isset($_GET['save'])){
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-status-working"><input
                                                         name="panel_b1_status" type="radio"
-                                                        id="panel-b1-status-working">
+                                                        id="panel-b1-status-working" <?php if ($Panel_B1_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-status-not-working"><input
                                                         name="panel_b1_status" type="radio"
-                                                        id="panel-b1-status-not-working">
+                                                        id="panel-b1-status-not-working" <?php if ($Panel_B1_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-status-missing"><input
                                                         name="panel_b1_status" type="radio"
-                                                        id="panel-b1-status-missing">
+                                                        id="panel-b1-status-missing" <?php if ($Panel_B1_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Missing</span></label>
                                             </div>
                                         </div>
@@ -735,27 +908,37 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-size-12-5"><input
-                                                        name="panel_b1_size" type="radio" id="panel-b1-size-12-5">
+                                                        name="panel_b1_size" type="radio" id="panel-b1-size-12-5" <?php if ($Panel_B1_Size == "12.5 Inch") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>12.5 Inch</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-size-13"><input
-                                                        name="panel_b1_size" type="radio" id="panel-b1-size-13">
+                                                        name="panel_b1_size" type="radio" id="panel-b1-size-13" <?php if ($Panel_B1_Size == "13 Inch") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>13 Inch</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-size-14"><input
-                                                        name="panel_b1_size" type="radio" id="panel-b1-size-14">
+                                                        name="panel_b1_size" type="radio" id="panel-b1-size-14" <?php if ($Panel_B1_Size == "14 Inch") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>14 Inch</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-size-15-6"><input
-                                                        name="panel_b1_size" type="radio" id="panel-b1-size-15-6">
+                                                        name="panel_b1_size" type="radio" id="panel-b1-size-15-6" <?php if ($Panel_B1_Size == "15.6 Inch") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>15.6 Inch</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-size-17"><input
-                                                        name="panel_b1_size" type="radio" id="panel-b1-size-17">
+                                                        name="panel_b1_size" type="radio" id="panel-b1-size-17" <?php if ($Panel_B1_Size == "17 Inch") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>17 Inch</span></label>
                                             </div>
                                         </div>
@@ -771,21 +954,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-damage-spot"><input
-                                                        name="panel-b1-damage" type="radio" id="panel-b1-damage-spot">
+                                                        name="panel_b1_damage" type="radio" id="panel-b1-damage-spot" <?php if ($Panel_B1_Damage == "Spot") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Spot</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b1-damage-lining"><input
-                                                        name="panel-b1-damage" type="radio" id="panel-b1-damage-lining">
+                                                        name="panel_b1_damage" type="radio" id="panel-b1-damage-lining" <?php if ($Panel_B1_Damage == "Lining") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Lining</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form12')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form14')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form12')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form14')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -800,21 +987,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b2-damage-yes"><input
-                                                        name="panel_b2_damage" type="radio" id="panel-b2-damage-yes">
+                                                        name="panel_b2_damage" type="radio" id="panel-b2-damage-yes" <?php if ($Panel_B2_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-b2-damage-no"><input
-                                                        name="panel_b2_damage" type="radio" id="panel-b2-damage-no">
+                                                        name="panel_b2_damage" type="radio" id="panel-b2-damage-no" <?php if ($Panel_B2_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form13')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form15')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form13')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form15')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -829,21 +1020,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c1-damage-yes"><input
-                                                        name="panel_c1_damage" type="radio" id="panel-c1-damage-yes">
+                                                        name="panel_c1_damage" type="radio" id="panel-c1-damage-yes" <?php if ($Panel_C1_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c1-damage-no"><input
-                                                        name="panel_c1_damage" type="radio" id="panel-c1-damage-no">
+                                                        name="panel_c1_damage" type="radio" id="panel-c1-damage-no" <?php if ($Panel_C1_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form14')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form16')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form14')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form16')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -858,21 +1053,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c2-damage-yes"><input
-                                                        name="panel_c2_damage" type="radio" id="panel-c2-damage-yes">
+                                                        name="panel_c2_damage" type="radio" id="panel-c2-damage-yes" <?php if ($Panel_C2_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c2-damage-no"><input
-                                                        name="panel_c2_damage" type="radio" id="panel-c2-damage-no">
+                                                        name="panel_c2_damage" type="radio" id="panel-c2-damage-no" <?php if ($Panel_C2_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form15')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form17')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form15')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form17')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -888,19 +1087,25 @@ if(isset($_GET['save'])){
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c3-status-working"><input
                                                         name="panel_c3_status" type="radio"
-                                                        id="panel-c3-status-working">
+                                                        id="panel-c3-status-working" <?php if ($Panel_C3_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c3-status-not-working"><input
                                                         name="panel_c3_status" type="radio"
-                                                        id="panel-c3-status-not-working">
+                                                        id="panel-c3-status-not-working" <?php if ($Panel_C3_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c3-status-missing"><input
                                                         name="panel_c3_status" type="radio"
-                                                        id="panel-c3-status-missing">
+                                                        id="panel-c3-status-missing" <?php if ($Panel_C3_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Missing</span></label>
                                             </div>
                                         </div>
@@ -917,21 +1122,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c3-damage-yes"><input
-                                                        name="panel_c3_damage" type="radio" id="panel-c3-damage-yes">
+                                                        name="panel_c3_damage" type="radio" id="panel-c3-damage-yes" <?php if ($Panel_C3_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c3-damage-no"><input
-                                                        name="panel_c3_damage" type="radio" id="panel-c3-damage-no">
+                                                        name="panel_c3_damage" type="radio" id="panel-c3-damage-no" <?php if ($Panel_C3_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form16')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form18')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form16')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form18')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -947,19 +1156,25 @@ if(isset($_GET['save'])){
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c4-status-working"><input
                                                         name="panel_c4_status" type="radio"
-                                                        id="panel-c4-status-working">
+                                                        id="panel-c4-status-working" <?php if ($Panel_C4_Status == "Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c4-status-not-working"><input
                                                         name="panel_c4_status" type="radio"
-                                                        id="panel-c4-status-not-working">
+                                                        id="panel-c4-status-not-working" <?php if ($Panel_C4_Status == "Not Working") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Not Working</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c4-status-missing"><input
                                                         name="panel_c4_status" type="radio"
-                                                        id="panel-c4-status-missing">
+                                                        id="panel-c4-status-missing"  <?php if ($Panel_C4_Status == "Missing") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Missing</span></label>
                                             </div>
                                         </div>
@@ -976,21 +1191,25 @@ if(isset($_GET['save'])){
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c4-damage-yes"><input
-                                                        name="panel_c4_damage" type="radio" id="panel-c4-damage-yes">
+                                                        name="panel_c4_damage" type="radio" id="panel-c4-damage-yes" <?php if ($Panel_C4_Damage == "Yes") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>Yes</span></label>
                                             </div>
                                             <div class="col-lg-4">
                                                 <label class="rdiobox" for="panel-c4-damage-no"><input
-                                                        name="panel_c4_damage" type="radio" id="panel-c4-damage-no">
+                                                        name="panel_c4_damage" type="radio" id="panel-c4-damage-no" <?php if ($Panel_C4_Damage == "No") {
+                                                            echo "checked";
+                                                        } ?>>
                                                     <span>No</span></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form17')">Previous</button>
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="nextForm('form19')">Next</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form17')">Previous</div>
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="nextForm('form19')">Next</div>
                                 </div>
                             </div>
                         </div>
@@ -1006,17 +1225,18 @@ if(isset($_GET['save'])){
                                                     <div class="col-lg">
                                                         <textarea class="form-control mb-4"
                                                             placeholder="Write remark here if any..."
-                                                            rows="3"></textarea>
+                                                            rows="3" name="remark"></textarea>
                                                     </div>
                                     </div>
-                                    <!-- <button class="btn btn-primary m-2 text-center" type="submit">Submit</button> -->
-                                    <button class="btn btn-primary m-2 text-center"
-                                        onclick="previousForm('form18')">Previous</button>
-                                        <button class="btn btn-primary m-2 text-center" name="save" onclick="submitForm()">Submit</button>
+                                    <!-- <div class="btn btn-primary m-2 text-center" type="submit">Submit</div> -->
+                                    <div class="btn btn-primary m-2 text-center"
+                                        onclick="previousForm('form18')">Previous</div>
+                                        <button type="submit" class="btn btn-primary m-2 text-center" name="update" onclick="submitForm()">Submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </form>
 
                 </div>
             </div>
@@ -1045,10 +1265,63 @@ if(isset($_GET['save'])){
         }
     }
 
-    function submitForm() {
-        // Perform form submission logic here
-        alert('Form submitted!');
-    }
+    // function submitForm() {
+    //     // Perform form submission logic here
+    //     alert('Form submitted!');
+    // }
 </script>
+
+<!-- Submit Form Code -->
+<?php
+if (isset($_POST['update'])) {
+    $Product = $_POST['select_product'];
+    $Brand = $_POST['brand_radio'];
+    $Model = $_POST['model'];
+    $Power = $_POST['power'];
+    $Processor_Brand = $_POST['select_processor'];
+    $Processor_Generation = $_POST['select_generation'];
+    $Processor_Status = $_POST['processor_status'];
+    $Processor_Damage = $_POST['processor_damage'];
+    $Battery_Status = $_POST['battery_status'];
+    $Battery_Damage = $_POST['battery_damage'];
+    $Motherboard_Status = $_POST['motherboard_status'];
+    $Motherboard_Damage = $_POST['motherboard_damage'];
+    $Keyboard_Status = $_POST['keyboard_status'];
+    $Keyboard_Damage = $_POST['keyboard_damage'];
+    $Touchpad_Status = $_POST['touchpad_status'];
+    $Touchpad_Damage = $_POST['touchpad_damage'];
+    $HDD_Status = $_POST['hdd_status'];
+    $HDD_Storage = $_POST['hdd_storage'];
+    $HDD_Damage = $_POST['hdd_damage'];
+    $RAM_Status = $_POST['ram_status'];
+    $RAM_Type = $_POST['ram_type'];
+    $RAM_Storage = $_POST['ram_storage'];
+    $RAM_Damage = $_POST['ram_damage'];
+    $Panel_A_Damage = $_POST['panel_a_damage'];
+    $Panel_B1_Status = $_POST['panel_b1_status'];
+    $Panel_B1_Size = $_POST['panel_b1_size'];
+    $Panel_B1_Damage = $_POST['panel_b1_damage'];
+    $Panel_B2_Damage = $_POST['panel_b2_damage'];
+    $Panel_C1_Damage = $_POST['panel_c1_damage'];
+    $Panel_C2_Damage = $_POST['panel_c2_damage'];
+    $Panel_C3_Status = $_POST['panel_c3_status'];
+    $Panel_C3_Damage = $_POST['panel_c3_damage'];
+    $Panel_C4_Status = $_POST['panel_c4_status'];
+    $Panel_C4_Damage = $_POST['panel_c4_damage'];
+    $Remark = $_POST['remark'];
+
+    // Update query
+    $update = "UPDATE `inspection_sheet_data` SET Product = '$Product', Brand = '$Brand', Model = '$Model', Power = '$Power', Processor_Brand = '$Processor_Brand', Processor_Status = '$Processor_Status', Processor_Damage = '$Processor_Damage', Processor_Generation = '$Processor_Generation', Battery_Status = '$Battery_Status', Battery_Damage = '$Battery_Damage', Motherboard_Status = '$Motherboard_Status', Motherboard_Damage = '$Motherboard_Damage', Keyboard_Status = '$Keyboard_Status', Keyboard_Damage = '$Keyboard_Damage', Touchpad_Status = '$Touchpad_Status', Touchpad_Damage = '$Touchpad_Damage', HDD_Status = '$HDD_Status', HDD_Storage = '$HDD_Storage', HDD_Damage = '$HDD_Damage', RAM_Status = '$RAM_Status', RAM_Type = '$RAM_Type', RAM_Storage = '$RAM_Storage', RAM_Damage = '$RAM_Damage', Panel_A_Damage = '$Panel_A_Damage', Panel_B1_Status = '$Panel_B1_Status', Panel_B1_Size = '$Panel_B1_Size', Panel_B1_Damage = '$Panel_B1_Damage', Panel_B2_Damage = '$Panel_B2_Damage', Panel_C1_Damage = '$Panel_C1_Damage', Panel_C2_Damage = '$Panel_C2_Damage', Panel_C3_Status = '$Panel_C3_Status', Panel_C3_Damage = '$Panel_C3_Damage', Panel_C4_Status = '$Panel_C4_Status', Panel_C4_Damage = '$Panel_C4_Damage', Remark = '$Remark' WHERE id = $edit_id";
+    $result_update = mysqli_query($con, $update);
+    if ($result_update) {
+        echo "
+        <script>
+            function submitForm() {
+                alert('Form submitted!');
+            }</script>
+        ";
+    }
+}
+?>
 
 <!-- <button class="btn btn-primary m-2 text-center" onclick="submitForm()">Submit</button> -->

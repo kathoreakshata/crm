@@ -74,6 +74,30 @@
 </div>
 <!-- ROW CLOSED -->
 
+<!-- Material Sheet Table -->
+<div class="row">
+    <div class="row row-sm">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive export-table">
+                        <table id="editable-file-datatable" class="table table-nowrap table-bordered wp-100">
+                            
+                            <tbody>
+                                <?php
+                                $select_query = "SELECT * FROM mastersheet WHERE csv_file = 'E-waste_1701422237.csv'";
+                                $result_query = mysqli_query($con, $select_query);
+                                $row = mysqli_fetch_assoc($result_query);
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <?php
